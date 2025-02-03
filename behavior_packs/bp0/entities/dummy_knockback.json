@@ -1,0 +1,128 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "overtales:dummy_knockback",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"crimson_wings": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.05,
+					"cooldown_time": 0,
+					"duration": 0.05,
+					"knockback_damage": 0,
+					"knockback_horizontal_strength": 2,
+					"knockback_range": 1,
+					"knockback_vertical_strength": 2,
+					"track_target": false,
+					"knockback_strength": 3,
+					"knockback_height_cap": 1,
+					"knockback_filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "illusion_shard"
+							}
+						]
+					},
+					"on_roar_end":{
+						"event": "despawn"
+					}
+				}
+			},
+			"illusion_shard": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.05,
+					"cooldown_time": 0,
+					"duration": 0.05,
+					"knockback_damage": 0,
+					"knockback_horizontal_strength": 3,
+					"knockback_range": 1,
+					"knockback_vertical_strength": 0,
+					"track_target": false,
+					"knockback_strength": 3,
+					"knockback_height_cap": 0.25,
+					"knockback_filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "illusion_shard"
+							}
+						]
+					},
+					"on_roar_end":{
+						"event": "despawn"
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"dummy_dash"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fatal",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"crimson_wings":{
+				"add": {
+					"component_groups": [
+						"crimson_wings"
+					]
+				}
+			},
+			"illusion_shard":{
+				"add": {
+					"component_groups": [
+						"illusion_shard"
+					]
+				}
+			}
+		}
+	}
+}

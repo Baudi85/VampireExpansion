@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.projectile":{
+			"states": {
+				"default":{
+					"transitions": [
+						{
+							"hit": "query.skin_id == 1"
+						}
+					]
+				},
+				"hit":{
+					"on_entry": [
+						"/function weapon/projectile_hit",
+						"@s despawn"
+					]
+				}
+			}
+		},
+		"controller.animation.soul_projectile":{
+			"states": {
+				"default":{
+					"transitions": [
+						{
+							"hit": "query.skin_id == 1"
+						}
+					]
+				},
+				"hit":{
+					"on_entry": [
+						"/function monster/soul_projectile_hit",
+						"@s despawn"
+					]
+				}
+			}
+		}
+	}
+}

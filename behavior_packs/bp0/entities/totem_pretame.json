@@ -1,0 +1,159 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "overtales:totem_pretame",
+         "runtime_identifier": "minecraft:arrow",
+         "is_spawnable": false,
+         "is_summonable": true,
+         "is_experimental": false
+      },
+      "component_groups": {
+         "totem_warrior": {
+            "minecraft:transformation": {
+               "into": "overtales:totem_warrior",
+               "keep_owner": true,
+               "delay":{
+                  "value": 0.1
+               }
+            }
+         },
+         "totem_archer": {
+            "minecraft:transformation": {
+               "into": "overtales:totem_archer",
+               "keep_owner": true,
+               "delay":{
+                  "value": 0.1
+               }
+            }
+         },
+         "totem_wolf": {
+            "minecraft:transformation": {
+               "into": "overtales:totem_wolf",
+               "keep_owner": true,
+               "delay":{
+                  "value": 0.1
+               }
+            }
+         },
+         "totem_bat": {
+            "minecraft:transformation": {
+               "into": "overtales:totem_bat",
+               "keep_owner": true,
+               "delay":{
+                  "value": 0.1
+               }
+            }
+         },
+         "pos1":{
+            "minecraft:projectile": {
+               "anchor": 2,
+               "power": 0,
+               "offset": [
+                  0,
+                  -1,
+                  2.5
+               ]
+            }
+         },
+         "pos2":{
+            "minecraft:projectile": {
+               "anchor": 2,
+               "power": 0,
+               "offset": [
+                  1.5,
+                  -1,
+                  1.5
+               ]
+            }
+         },
+         "pos3":{
+            "minecraft:projectile": {
+               "anchor": 2,
+               "power": 0,
+               "offset": [
+                  -1.5,
+                  -1,
+                  1.5
+               ]
+            }
+         }
+      },
+      "components": {},
+      "events": {
+         "totem_warrior1":{
+            "add": {
+               "component_groups": [
+                  "totem_warrior",
+                  "pos1"
+               ]
+            }
+         },
+         "totem_warrior2":{
+            "add": {
+               "component_groups": [
+                  "totem_warrior",
+                  "pos2"
+               ]
+            }
+         },
+         "totem_warrior3":{
+            "add": {
+               "component_groups": [
+                  "totem_warrior",
+                  "pos3"
+               ]
+            }
+         },
+         "totem_archer1":{
+            "add": {
+               "component_groups": [
+                  "totem_archer",
+                  "pos1"
+               ]
+            }
+         },
+         "totem_archer2":{
+            "add": {
+               "component_groups": [
+                  "totem_archer",
+                  "pos2"
+               ]
+            }
+         },
+         "totem_archer3":{
+            "add": {
+               "component_groups": [
+                  "totem_archer",
+                  "pos3"
+               ]
+            }
+         },
+         "totem_wolf1":{
+            "add": {
+               "component_groups": [
+                  "totem_wolf",
+                  "pos2"
+               ]
+            }
+         },
+         "totem_wolf2":{
+            "add": {
+               "component_groups": [
+                  "totem_wolf",
+                  "pos3"
+               ]
+            }
+         }
+         ,
+         "totem_bat":{
+            "add": {
+               "component_groups": [
+                  "totem_bat",
+                  "pos1"
+               ]
+            }
+         }
+      }
+   }
+}

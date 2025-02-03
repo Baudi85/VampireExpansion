@@ -1,0 +1,15 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:item": {
+      "description": {
+         "identifier": "overtales:crimson_sword"
+      },
+      "components": {
+         "minecraft:max_stack_size": 1,
+         "minecraft:stacked_by_data": true,
+         "minecraft:foil": false,
+         "minecraft:hand_equipped": true,
+         "minecraft:max_damage": 1500
+      }
+   }
+}

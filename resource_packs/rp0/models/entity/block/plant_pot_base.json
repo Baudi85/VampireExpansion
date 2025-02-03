@@ -1,0 +1,68 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.plant_pot_base.geo",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-7, 0, -7],
+							"size": [14, 4, 14],
+							"uv": {
+								"north": {"uv": [46, 28], "uv_size": [14, 4]},
+								"east": {"uv": [46, 28], "uv_size": [14, 4]},
+								"south": {"uv": [46, 28], "uv_size": [14, 4]},
+								"west": {"uv": [46, 28], "uv_size": [14, 4]},
+								"up": {"uv": [48, 0], "uv_size": [14, 14]},
+								"down": {"uv": [50, 46], "uv_size": [14, -14]}
+							}
+						},
+						{
+							"origin": [-5, 2, -5],
+							"size": [10, 6, 10],
+							"uv": {
+								"north": {"uv": [36, 28], "uv_size": [10, 6]},
+								"east": {"uv": [36, 28], "uv_size": [10, 6]},
+								"south": {"uv": [36, 28], "uv_size": [10, 6]},
+								"west": {"uv": [36, 28], "uv_size": [10, 6]}
+							}
+						},
+						{
+							"origin": [-7, 6, -7],
+							"size": [14, 10, 14],
+							"uv": {
+								"north": {"uv": [0, 48], "uv_size": [14, 10]},
+								"east": {"uv": [0, 48], "uv_size": [14, 10]},
+								"south": {"uv": [0, 48], "uv_size": [14, 10]},
+								"west": {"uv": [0, 48], "uv_size": [14, 10]},
+								"down": {"uv": [46, 14], "uv_size": [-14, -14]}
+							}
+						},
+						{
+							"origin": [-9, 16, -9],
+							"size": [18, 2, 18],
+							"uv": {
+								"north": {"uv": [0, 46], "uv_size": [18, 2]},
+								"east": {"uv": [0, 46], "uv_size": [18, 2]},
+								"south": {"uv": [0, 46], "uv_size": [18, 2]},
+								"west": {"uv": [0, 46], "uv_size": [18, 2]},
+								"up": {"uv": [0, 28], "uv_size": [18, 18]},
+								"down": {"uv": [18, 46], "uv_size": [18, -18]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

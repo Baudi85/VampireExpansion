@@ -1,0 +1,14 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:item": {
+      "description": {
+         "identifier": "overtales:crimson_pearl",
+         "category": "Nature"
+      },
+      "components": {
+         "minecraft:icon": "crimson_pearl",
+         "minecraft:use_animation": "bow",
+         "minecraft:render_offsets": "apple"
+      }
+   }
+}

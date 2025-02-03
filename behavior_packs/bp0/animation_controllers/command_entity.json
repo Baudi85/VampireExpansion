@@ -1,0 +1,49 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.totem_summon":{
+			"initial_state": "default",
+			"states": {
+				"default":{
+					"transitions": [
+						{
+							"spawn": "query.is_alive"
+						}
+					]
+				},
+				"spawn":{
+					"transitions": [
+						{
+							"despawn": "query.mark_variant == 1"
+						}
+					],
+					"on_entry": [
+						"/function artifact/summon_spawn"
+					]
+				},
+				"despawn":{
+					"on_entry": [
+						"/function artifact/summon_despawn"
+					]
+				}
+			}
+		},
+		"controller.animation.command_crimson_horse":{
+			"states": {
+				"default":{
+					"transitions": [
+						{
+							"tame": "q.is_tamed && q.mark_variant == 1"
+						}
+					]
+				},
+				"tame":{
+					"on_entry": [
+						"/function entity/crimson_horse",
+						"@s mark0"
+					]
+				}
+			}
+		}
+	}
+}

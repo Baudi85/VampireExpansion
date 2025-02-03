@@ -1,0 +1,295 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "overtales:totem_warrior",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"command": "controller.animation.totem_summon"
+			},
+			"scripts": {
+				"animate": [
+					"command"
+				]
+			}
+		},
+		"component_groups": {
+			"timer_spawn": {
+				"minecraft:timer": {
+					"time": [
+						1,
+						1
+					],
+					"looping": false,
+					"time_down_event": {
+						"event": "movement",
+						"target": "self"
+					}
+				},
+				"minecraft:collision_box": {
+					"width": 0,
+					"height": 2
+				}
+			},
+			"timer_target": {
+				"minecraft:timer": {
+					"time": [
+						30,
+						34
+					],
+					"looping": true,
+					"time_down_event": {
+						"event": "timer_despawn",
+						"target": "self"
+					}
+				}
+			},
+			"timer_despawn": {
+				"minecraft:timer": {
+					"time": [
+						2,
+						2
+					],
+					"looping": true,
+					"time_down_event": {
+						"event": "despawn",
+						"target": "self"
+					}
+				},
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"tame": {
+				"minecraft:is_tamed": {},
+				"minecraft:behavior.follow_owner": {
+					"priority": 0,
+					"speed_multiplier": 1,
+					"start_distance": 8,
+					"stop_distance": 5,
+					"can_teleport": true
+				},
+				"minecraft:behavior.owner_hurt_by_target": {
+					"priority": 1
+				},
+				"minecraft:behavior.owner_hurt_target": {
+					"priority": 2,
+					"entity_types":[
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "training_dummy"
+							}
+						}
+					]
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 3,
+					"must_see": true,
+					"reselect_targets": true,
+					"within_radius": 8,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "monster"
+									}
+								]
+							},
+							"max_dist": 8
+						}
+					]
+				}
+			},
+			"movement": {
+				"minecraft:movement.basic": {},
+				"minecraft:navigation.walk": {
+					"can_path_over_water": true,
+					"avoid_damage_blocks": true
+				},
+				"minecraft:movement": {
+					"value": 0.3
+				},
+				"minecraft:jump.static": {},
+				"minecraft:can_climb": {
+				},
+				"minecraft:collision_box": {
+					"width": 0.7,
+					"height": 2
+				}
+			},
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"pet",
+					"summon",
+					"totem_warrior"
+				]
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:attack": {
+				"damage": 3
+			},
+			"minecraft:behavior.melee_attack": {
+				"priority": 0,
+				"speed_multiplier": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "is_owner",
+										"subject": "player",
+										"value": true
+									}
+								]
+							}
+						},
+						"deals_damage": false,
+						"cause": "all"
+					}
+				]
+			},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 7,
+				"target_distance": 6,
+				"look_time": [
+					2,
+					4
+				],
+				"probability": 0.02
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 8,
+				"look_time": [
+					3,
+					6
+				]
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 0.6,
+				"interval": 512
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 3
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {},
+			"minecraft:scale": {
+				"value": 1.2
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"all_of": {
+								"all_of": [
+									{
+										"test": "has_target",
+										"value": true
+									},
+									{
+										"test": "is_family",
+										"subject": "target",
+										"operator": "==",
+										"value": "monster"
+									},
+									{
+										"test": "is_mark_variant",
+										"subject": "self",
+										"operator": "!=",
+										"value": 1
+									},
+									{
+										"test": "has_component",
+										"operator": "==",
+										"value": "minecraft:movement"
+									}
+								]
+							}
+						},
+						"event": "timer_target",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:follow_range": {
+				"value": 24,
+				"max": 24
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"tame",
+						"timer_spawn"
+					]
+				}
+			},
+			"minecraft:entity_transformed": {
+				"trigger": "minecraft:entity_spawned"
+			},
+			"timer_target": {
+				"add": {
+					"component_groups": [
+						"timer_target"
+					]
+				}
+			},
+			"timer_despawn": {
+				"add": {
+					"component_groups": [
+						"timer_despawn"
+					]
+				}
+			},
+			"movement": {
+				"add": {
+					"component_groups": [
+						"movement"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"timer_spawn"
+					]
+				}
+			},
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

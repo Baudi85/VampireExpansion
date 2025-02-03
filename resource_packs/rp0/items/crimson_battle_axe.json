@@ -1,0 +1,13 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:item": {
+      "description": {
+         "identifier": "overtales:crimson_battle_axe",
+         "category": "Equipment"
+      },
+      "components": {
+         "minecraft:icon": "crimson_battle_axe",
+         "minecraft:render_offsets": "apple"
+      }
+   }
+}

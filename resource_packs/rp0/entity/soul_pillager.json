@@ -1,0 +1,64 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "overtales:soul_pillager",
+      "materials": {
+        "default": "soul",
+        "soul_pillager_weapon": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/soul_pillager",
+				"soul_pillager_weapon_right": "textures/items/soul_pillager_axe",
+        "soul_pillager_weapon_left": "textures/items/soul_pillager_bow"
+      },
+      "geometry": {
+        "default": "geometry.soul_pillager.geo",
+        "soul_pillager_weapon_right": "geometry.soul_pillager_weapon_right.geo",
+        "soul_pillager_weapon_left": "geometry.soul_pillager_weapon_left.geo"
+      },
+      "spawn_egg": {
+        "base_color": "#eeffff",
+        "overlay_color": "#ffffff"
+      },
+      "animations": {
+        "lookat": "animation.entity.lookat",
+        "riding": "animation.humanoid.riding.legs",
+        "walk": "animation.soul_pillager.walk",
+        "attack": "animation.soul_pillager.attack",
+        "shoot": "animation.soul_pillager.shoot",
+        "target_melee": "animation.soul_pillager.target_melee",
+        "target_shoot": "animation.soul_pillager.target_shoot",
+        "idle": "animation.soul_pillager.idle",
+        "ac": "controller.animation.soul_monster.attack"
+      },
+      "scripts": {
+        "animate": [
+          "lookat",
+          "idle",
+          "ac",
+          {
+            "riding": "q.is_riding"
+          },
+          {
+            "walk": "q.modified_move_speed"
+          },
+          {
+            "target_melee": "q.has_target && q.mark_variant == 0"
+          },
+          {
+            "target_shoot": "q.has_target && q.mark_variant == 1"
+          },
+          {
+            "shoot": "q.has_target && q.mark_variant == 1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.overtales.soul",
+        "controller.render.overtales.soul_pillager_weapon_right",
+        "controller.render.overtales.soul_pillager_weapon_left"
+      ]
+    }
+  }
+}

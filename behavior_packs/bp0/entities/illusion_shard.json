@@ -1,0 +1,116 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "overtales:illusion_shard",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:creeper",
+			"animations": {
+			  "command": "controller.animation.illusion_shard"
+			},
+			"scripts": {
+			  "animate": [
+				 "command"
+			  ]
+			}
+		},
+		"component_groups": {
+			"despawn":{
+				"minecraft:instant_despawn": {}
+			},
+			"explode":{
+				"minecraft:explode": {
+					"fuse_length": 0.1,
+					"fuse_lit": true,
+					"power": 0,
+					"causes_fire": false,
+					"breaks_blocks": false
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"illusion_shard",
+					"player"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.96
+			},
+			"minecraft:timer": {
+				"time": 4.1,
+				"looping": true,
+				"time_down_event": {
+					"event": "despawn"
+				}
+			},
+			"minecraft:explode": {
+				"fuse_length": 4,
+				"fuse_lit": true,
+				"power": 0,
+				"causes_fire": false,
+				"breaks_blocks": false
+			},
+			"minecraft:physics": {},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:push_through": {
+				"value": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							},
+							"target": "self",
+							"event": "explode"
+						},
+						"cause": "all",
+						"deals_damage": false
+					},
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:scale": {
+				"value": 0.75
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"explode":{
+				"add": {
+					"component_groups": [
+						"explode"
+					]
+				}
+			},
+			"despawn": {
+				"add":{
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+   "format_version": "1.10.0",
+   "animation_controllers": {
+      "controller.animation.command_training_dummy":{
+         "states": {
+            "default":{
+               "transitions": [
+                  {
+                     "hurt": "query.skin_id == 1"
+                  }
+               ],
+               "on_entry": [
+                  "/effect @s regeneration 20 50 true",
+                  "/effect @s resistance 20 50 true"
+               ]
+            },
+            "hurt":{
+               "transitions": [
+                  {
+                     "default": "query.skin_id != 1"
+                  }
+               ],
+               "on_entry": [
+                  "/playanimation @s animation.training_dummy.hurt hurt 1",
+                  "@s remove_command"
+               ]
+            }
+         }
+      }
+   }
+}

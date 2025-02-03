@@ -1,0 +1,13 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:item": {
+      "description": {
+         "identifier": "overtales:crimson_sword",
+         "category": "Equipment"
+      },
+      "components": {
+         "minecraft:icon": "crimson_sword",
+         "minecraft:render_offsets": "apple"
+      }
+   }
+}

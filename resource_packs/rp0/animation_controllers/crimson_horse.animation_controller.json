@@ -1,0 +1,28 @@
+{
+   "format_version": "1.10.0",
+   "animation_controllers": {
+      "controller.animation.crimson_horse": {
+         "states": {
+            "default": {
+               "transitions": [
+                  {
+                     "jump": "!query.is_on_ground && q.has_rider"
+                  }
+               ],
+               "blend_transition": 0.1
+            },
+            "jump":{
+               "animations": [
+                  "jump"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.is_on_ground || !q.has_rider"
+                  }
+               ],
+               "blend_transition": 0.1
+            }
+         }
+      }
+   }
+}

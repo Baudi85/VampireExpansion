@@ -1,0 +1,48 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "overtales:soul_skeleton",
+      "materials": {
+        "default": "soul"
+      },
+      "textures": {
+        "default": "textures/entity/soul_skeleton"
+      },
+      "geometry": {
+        "default": "geometry.soul_skeleton.geo"
+      },
+      "spawn_egg": {
+        "base_color": "#eeffff",
+        "overlay_color": "#ffffff"
+      },
+      "animations": {
+        "lookat": "animation.entity.lookat",
+        "attack": "animation.soul_skeleton.attack",
+        "shoot": "animation.soul_skeleton.shoot",
+        "idle": "animation.soul_skeleton.idle",
+        "target": "animation.soul_skeleton.target",
+        "walk": "animation.soul_skeleton.walk",
+        "ac_attack": "controller.animation.soul_monster.attack",
+        "ac_shoot": "controller.animation.soul_monster.shoot"
+      },
+      "scripts": {
+        "animate": [
+          "lookat",
+          "idle",
+          "ac_attack",
+          "ac_shoot",
+          {
+            "walk": "q.modified_move_speed"
+          },
+          {
+            "target": "q.has_target"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.overtales.soul"
+      ]
+    }
+  }
+}

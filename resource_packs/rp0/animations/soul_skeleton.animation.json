@@ -1,0 +1,83 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.soul_skeleton.idle": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": ["math.sin(q.anim_time*38.7)*5", "math.cos(q.anim_time*38.7)*5", 0]
+				},
+				"rightArm": {
+					"rotation": ["-math.sin(q.anim_time*38.7)*10", 0, "math.cos(q.anim_time*38.7)*5+5"]
+				},
+				"leftArm": {
+					"rotation": ["math.sin(q.anim_time*38.7)*10", 0, "-math.cos(q.anim_time*38.7)*5-5"]
+				},
+				"leg": {
+					"rotation": ["-math.sin(q.anim_time*38.7*1.5)*5", "-math.cos(q.anim_time*38.7*1.5)*5", 0]
+				},
+				"root": {
+					"position": [0, "-math.cos(q.anim_time*38.7*2)*3+3", 0]
+				}
+			}
+		},
+		"animation.soul_skeleton.walk": {
+			"loop": true,
+			"anim_time_update": "q.modified_distance_moved",
+			"blend_weight": "2",
+			"bones": {
+				"rightArm": {
+					"rotation": ["math.clamp(q.anim_time,0,15-math.cos(q.anim_time*38.7)*5)", 0, 0]
+				},
+				"leftArm": {
+					"rotation": ["math.clamp(q.anim_time,0,15+math.cos(q.anim_time*38.7)*5)", 0, 0]
+				},
+				"leg": {
+					"rotation": ["math.clamp(q.anim_time,0,15)", 0, 0]
+				}
+			}
+		},
+		"animation.soul_skeleton.target": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": [-90, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-90, 0, 0]
+				}
+			}
+		},
+		"animation.soul_skeleton.attack": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": [-60, 0, -30]
+				},
+				"leftArm": {
+					"rotation": [-60, 0, 30]
+				}
+			}
+		},
+		"animation.soul_skeleton.shoot": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.35": [0, -30, 0],
+						"0.5": [-45, -30, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.35": [0, 30, 0],
+						"0.5": [-45, 30, 0]
+					}
+				}
+			}
+		}
+	}
+}

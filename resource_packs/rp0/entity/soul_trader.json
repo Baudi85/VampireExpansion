@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:soul_trader",
+			"geometry": {
+				"default": "geometry.crimson_trader.geo"
+			},
+			"textures": {
+				"default": "textures/entity/soul_trader"
+			},
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"spawn_egg": {
+				"base_color": "#00617e",
+				"overlay_color": "#22fff8"
+			},
+			"render_controllers": [
+				"controller.render.overtales"
+			],
+			"animations": {
+				"general": "animation.villager.general",
+				"look_at_target": "animation.common.look_at_target",
+				"move": "animation.villager.move"
+			},
+			"scripts": {
+				"scale": "0.9375",
+				"animate": [
+					"general",
+					"look_at_target",
+					{
+						"move": "query.modified_move_speed"
+					}
+				]
+			}
+		}
+	}
+}

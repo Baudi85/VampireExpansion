@@ -1,0 +1,45 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "overtales:soul_zombie",
+      "materials": {
+        "default": "soul"
+      },
+      "textures": {
+        "default": "textures/entity/soul_zombie"
+      },
+      "geometry": {
+        "default": "geometry.soul_zombie.geo"
+      },
+      "spawn_egg": {
+        "base_color": "#eeffff",
+        "overlay_color": "#ffffff"
+      },
+      "animations": {
+        "baby": "animation.humanoid.big_head",
+        "lookat": "animation.entity.lookat",
+        "riding": "animation.humanoid.riding.legs",
+        "attack": "animation.soul_zombie.attack",
+        "idle": "animation.soul_zombie.idle",
+        "ac": "controller.animation.soul_monster.attack"
+      },
+      "scripts": {
+        "animate": [
+          "lookat",
+          "idle",
+          "ac",
+          {
+            "riding": "q.is_riding"
+          },
+          {
+            "baby": "q.is_baby"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.overtales.soul"
+      ]
+    }
+  }
+}

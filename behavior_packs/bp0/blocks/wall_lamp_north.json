@@ -1,0 +1,35 @@
+{
+   "format_version": "1.19.60",
+   "minecraft:block": {
+      "description": {
+         "identifier": "overtales:wall_lamp_north",
+         "menu_category": {
+            "category": "nature"
+         }
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "wall_lamp",
+               "render_method": "alpha_test",
+               "ambient_occlusion": false
+            }
+         },
+         "minecraft:geometry": "geometry.wall_lamp_north.geo",
+         "minecraft:destructible_by_mining":{
+            "seconds_to_destroy": 0.5
+         },
+         "minecraft:light_dampening": 15,
+         "minecraft:light_emission": 15,
+         "minecraft:selection_box": {
+            "origin": [-4, 0, -4],
+            "size": [8, 16, 8]
+         },
+         "minecraft:collision_box": {
+            "origin": [-4, 0, -4],
+            "size": [8, 16, 8]
+         }
+      },
+      "events": {}
+   }
+}

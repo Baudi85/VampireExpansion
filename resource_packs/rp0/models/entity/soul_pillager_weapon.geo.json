@@ -1,0 +1,117 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.soul_pillager_weapon_right.geo",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{
+							"origin": [0, 0, 0],
+							"size": [0, 0, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [0, 0]
+								},
+								"east": {
+									"uv": [0, 0],
+									"uv_size": [0, 0]
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [0, 0]
+								},
+								"west": {
+									"uv": [0, 0],
+									"uv_size": [0, 0]
+								},
+								"up": {
+									"uv": [0, 0],
+									"uv_size": [0, 0]
+								},
+								"down": {
+									"uv": [0, 0],
+									"uv_size": [0, 0]
+								}
+							}
+						}
+					],
+					"texture_meshes": [
+						{
+							"texture": "soul_pillager_weapon_right",
+							"position": [-6, 42, -7],
+							"rotation": [0, 45, -90]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.soul_pillager_weapon_left.geo",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [5, 22, 0],
+					"cubes": [
+						{
+							"origin": [0, 0, 0],
+							"size": [0, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [0, 0]},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					],
+					"texture_meshes": [
+						{
+							"texture": "soul_pillager_weapon_left",
+							"position": [3.5, 43, 3],
+							"rotation": [0, 60, -90]
+						}
+					]
+				}
+			]
+		}
+	]
+}

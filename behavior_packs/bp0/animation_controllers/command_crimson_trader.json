@@ -1,0 +1,21 @@
+{
+   "format_version": "1.10.0",
+   "animation_controllers": {
+      "controller.animation.command_crimson_trader":{
+         "states": {
+            "default":{
+               "transitions": [
+                  {
+                     "die": "!query.is_alive"
+                  }
+               ]
+            },
+            "die":{
+               "on_entry": [
+                  "@s respawn"
+               ]
+            }
+         }
+      }
+   }
+}

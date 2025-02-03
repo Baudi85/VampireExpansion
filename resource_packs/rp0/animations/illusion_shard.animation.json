@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.illusion_shard.idle": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [-60, "30+(q.life_time*50)", -30],
+					"position": [0, "16+math.sin(q.life_time*230)*8", 0]
+				},
+				"glass": {
+					"rotation": [-60, "30+(q.life_time*100)", -30],
+					"scale": [0.825, 0.825, 0.825]
+				},
+				"crystal": {
+					"rotation": [-60, "30+(q.life_time*150)", -30],
+					"scale": ["0.825+(-math.sin(q.anim_time*1024*2)*0.05)", "0.825+(-math.sin(q.anim_time*1024*2)*0.05)", "0.825+(-math.sin(q.anim_time*1024*2)*0.05)"]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "particle",
+					"locator": "particle"
+				}
+			}
+		},
+		"animation.illusion_shard.swelling": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"scale": ["variable.swelling_scale", "variable.swelling_scale", "variable.swelling_scale"]
+				}
+			}
+		}
+	}
+}

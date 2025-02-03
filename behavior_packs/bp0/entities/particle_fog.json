@@ -1,0 +1,85 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "overtales:particle_fog",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"enable": {
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"disable": {
+				"minecraft:mark_variant": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"particle_fog"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:mark_variant": {
+				"value": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fatal",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"enable":{
+				"add": {
+					"component_groups": [
+						"enable"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"disable"
+					]
+				}
+			},
+			"disable":{
+				"add": {
+					"component_groups": [
+						"disable"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"enable"
+					]
+				}
+			}
+		}
+	}
+}

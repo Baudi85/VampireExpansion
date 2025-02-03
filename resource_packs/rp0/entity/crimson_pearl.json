@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:crimson_pearl",
+			"geometry": {
+				"default": "geometry.item_sprite_o.geo"
+			},
+			"textures": {
+				"default": "textures/items/crimson_pearl"
+			},
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"render_controllers": [
+				"controller.render.overtales"
+			],
+			"animations": {
+				"idle": "animation.actor.billboard",
+				"particle": "animation.crimson_wand_projectile.particle"
+			},
+			"scripts": {
+				"animate": [
+					"idle",
+					"particle"
+				]
+			},
+			"particle_effects": {
+				"particle" : "overtales:crimson_projectile_tail"
+			}
+		}
+	}
+}

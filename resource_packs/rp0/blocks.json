@@ -1,0 +1,70 @@
+{
+   "overtales:hanglamp":{
+      "sound": "copper"
+   },
+   "overtales:mushroom_scary" : {
+      "sound" : "wood",
+      "textures" : "mushroom_scary"
+   },
+   "overtales:plant_pot_base":{
+      "sound": "stone"
+   },
+   "overtales:plant_pot_top":{
+      "sound": "azalea"
+   },
+   "overtales:red_wool_scary" : {
+      "sound" : "cloth",
+      "textures" : "red_wool_scary"
+   },
+   "overtales:round_lamp":{
+      "sound": "stone"
+   },
+   "overtales:small_rose_bush":{
+      "sound": "grass"
+   },
+   "overtales:statue_bottom_east":{
+      "sound": "stone"
+   },
+   "overtales:statue_bottom_north":{
+      "sound": "stone"
+   },
+   "overtales:statue_bottom_south":{
+      "sound": "stone"
+   },
+   "overtales:statue_bottom_west":{
+      "sound": "stone"
+   },
+   "overtales:statue_top_east":{
+      "sound": "stone"
+   },
+   "overtales:statue_top_north":{
+      "sound": "stone"
+   },
+   "overtales:statue_top_south":{
+      "sound": "stone"
+   },
+   "overtales:statue_top_west":{
+      "sound": "stone"
+   },
+   "overtales:tall_lamp_base":{
+      "sound": "copper"
+   },
+   "overtales:tall_lamp_body":{
+      "sound": "copper"
+   },
+   "overtales:tall_lamp_top":{
+      "sound": "copper"
+   },
+   "overtales:wall_lamp_east":{
+      "sound": "copper"
+   },
+   "overtales:wall_lamp_north":{
+      "sound": "copper"
+   },
+   "overtales:wall_lamp_south":{
+      "sound": "copper"
+   },
+   "overtales:wall_lamp_west":{
+      "sound": "copper"
+   }
+}

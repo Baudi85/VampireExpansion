@@ -1,0 +1,396 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.wing": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"double_jump": "q.is_jumping && q.is_item_name_any('slot.armor.head','minecraft:chainmail_helmet')"
+						}
+					],
+					"on_entry": [
+						"/function artifact/crimson_wing_clear"
+					]
+				},
+				"double_jump": {
+					"transitions": [
+						{
+							"default": "q.is_on_ground || !q.is_item_name_any('slot.armor.head','minecraft:chainmail_helmet')"
+						},
+						{
+							"jump": "!q.is_jumping"
+						}
+					]
+				},
+				"jump": {
+					"transitions": [
+						{
+							"double_jump": "q.is_on_ground  || !q.is_item_name_any('slot.armor.head','minecraft:chainmail_helmet')"
+						},
+						{
+							"fly": "q.is_jumping"
+						}
+					]
+				},
+				"fly": {
+					"transitions": [
+						{
+							"jump": "1"
+						}
+					],
+					"on_entry": [
+						"/function artifact/crimson_wing_fly"
+					]
+				}
+			}
+		},
+		"controller.animation.player.totem_item": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"totem_warrior": "q.get_equipped_item_name == 'totem_warrior' && q.main_hand_item_use_duration > 1"
+						},
+						{
+							"totem_archer": "q.get_equipped_item_name == 'totem_archer' && q.main_hand_item_use_duration > 1"
+						},
+						{
+							"totem_wolf": "q.get_equipped_item_name == 'totem_wolf' && q.main_hand_item_use_duration > 1"
+						},
+						{
+							"totem_bat": "q.get_equipped_item_name == 'totem_bat' && q.main_hand_item_use_duration > 1"
+						},
+						{
+							"illusion_shard": "q.get_equipped_item_name == 'illusion_shard' && q.main_hand_item_use_duration > 1"
+						},
+						{
+							"crimson_pearl": "q.get_equipped_item_name == 'crimson_pearl' && q.main_hand_item_use_duration > 1"
+						}
+					]
+				},
+				"totem_warrior": {
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'totem_warrior' || !q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function artifact/totem_warrior"
+					]
+				},
+				"totem_archer": {
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'totem_archer' || !q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function artifact/totem_archer"
+					]
+				},
+				"totem_wolf": {
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'totem_wolf' || !q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function artifact/totem_wolf"
+					]
+				},
+				"totem_bat": {
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'totem_bat' || !q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function artifact/totem_bat"
+					]
+				},
+				"illusion_shard": {
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'illusion_shard' || !q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function artifact/illusion_shard"
+					]
+				},
+				"crimson_pearl": {
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_pearl' || !q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function artifact/crimson_pearl_use"
+					]
+				}
+			}
+		},
+		"controller.animation.player.crimson_armor": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"effect": "q.is_item_name_any('slot.armor.head','minecraft:chainmail_helmet') || q.is_item_name_any('slot.armor.chest','minecraft:chainmail_chestplate') || q.is_item_name_any('slot.armor.legs','minecraft:chainmail_leggings') || q.is_item_name_any('slot.armor.feet','minecraft:chainmail_boots')"
+						}
+					]
+				},
+				"effect": {
+					"animations": [
+						"crimson_armor_cd"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_item_name_any('slot.armor.head','minecraft:chainmail_helmet') && !q.is_item_name_any('slot.armor.chest','minecraft:chainmail_chestplate') && !q.is_item_name_any('slot.armor.legs','minecraft:chainmail_leggings') && !q.is_item_name_any('slot.armor.feet','minecraft:chainmail_boots')"
+						}
+					],
+					"on_exit": [
+						"/effect @s night_vision 0 0 true",
+						"/effect @s strength 0 0 true",
+						"/effect @s resistance 0 0 true",
+						"/effect @s fire_resistance 0 0 true"
+					]
+				}
+			}
+		},
+		"controller.animation.player.weapon":{
+			"initial_state": "default",
+			"states": {
+				"default":{
+					"transitions": [
+						{
+							"crimson_sword": "q.get_equipped_item_name == 'crimson_sword'"
+						},
+						{
+							"crimson_battle_axe": "q.get_equipped_item_name == 'crimson_battle_axe'"
+						},
+						{
+							"crimson_scythe": "q.get_equipped_item_name == 'crimson_scythe'"
+						},
+						{
+							"crimson_dual_sword": "q.get_equipped_item_name == 'crimson_dual_sword'"
+						},
+						{
+							"crimson_dagger": "q.get_equipped_item_name == 'crimson_dagger'"
+						},
+						{
+							"crimson_wand": "q.get_equipped_item_name == 'crimson_wand'"
+						},
+						{
+							"crimson_staff": "q.get_equipped_item_name == 'crimson_staff'"
+						},
+						{
+							"crimson_orb": "q.get_equipped_item_name == 'crimson_orb'"
+						}
+					],
+					"on_entry": [
+						"@s mark_variant_0"
+					]
+				},
+				"crimson_sword":{
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_sword'"
+						}
+					],
+					"on_entry": [
+						"@s mark_variant_1"
+					]
+				},
+				"crimson_battle_axe":{
+					"animations": [
+						"weapon_cd"
+					],
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_battle_axe'"
+						}
+					],
+					"on_entry": [
+						"@s mark_variant_1"
+					],
+					"on_exit": [
+						"/effect @s speed 0 0 true",
+						"/effect @s slowness 0 0 true"
+					]
+				},
+				"crimson_scythe":{
+					"animations": [
+						"weapon_cd"
+					],
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_scythe'"
+						}
+					],
+					"on_entry": [
+						"@s mark_variant_1"
+					],
+					"on_exit": [
+						"/effect @s speed 0 0 true",
+						"/effect @s slowness 0 0 true"
+					]
+				},
+				"crimson_dual_sword":{
+					"animations": [
+						"weapon_cd"
+					],
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_dual_sword'"
+						}
+					],
+					"on_entry": [
+						"@s mark_variant_1"
+					],
+					"on_exit": [
+						"/effect @s speed 0 0 true",
+						"/effect @s slowness 0 0 true"
+					]
+				},
+				"crimson_dagger":{
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_dagger'"
+						},
+						{
+							"crimson_dagger_shoot": "q.main_hand_item_use_duration > 1"
+						}
+					],
+					"on_entry": [
+						"@s mark_variant_2"
+					]
+				},
+				"crimson_dagger_shoot":{
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_dagger'"
+						},
+						{
+							"crimson_dagger": "!q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function weapon/crimson_dagger"
+					]
+				},
+				"crimson_wand":{
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_wand'"
+						},
+						{
+							"crimson_wand_shoot": "q.main_hand_item_use_duration > 1"
+						}
+					],
+					"on_entry": [
+						"@s mark_variant_2"
+					]
+				},
+				"crimson_wand_shoot":{
+					"animations": [
+						"cd_8"
+					],
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_wand'"
+						},
+						{
+							"crimson_wand": "q.any_animation_finished || !q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function weapon/crimson_wand"
+					]
+				},
+				"crimson_staff":{
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_staff'"
+						},
+						{
+							"crimson_staff_shoot": "q.main_hand_item_use_duration > 1"
+						}
+					],
+					"on_entry": [
+						"@s mark_variant_2"
+					]
+				},
+				"crimson_staff_shoot":{
+					"animations": [
+						"cd_32"
+					],
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_staff'"
+						},
+						{
+							"crimson_staff": "q.any_animation_finished || !q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function weapon/crimson_staff"
+					]
+				},
+				"crimson_orb":{
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_orb'"
+						},
+						{
+							"crimson_orb_shoot": "q.main_hand_item_use_duration > 1"
+						}
+					],
+					"on_entry": [
+						"@s mark_variant_2"
+					]
+				},
+				"crimson_orb_shoot":{
+					"animations": [
+						"cd_16"
+					],
+					"transitions": [
+						{
+							"default": "q.get_equipped_item_name != 'crimson_orb'"
+						},
+						{
+							"crimson_orb": "q.any_animation_finished || !q.main_hand_item_use_duration"
+						}
+					],
+					"on_entry": [
+						"/function weapon/crimson_orb"
+					]
+				}
+			}
+		},
+		"controller.animation.player.weapon_attack":{
+			"states": {
+				"default":{
+					"transitions": [
+						{
+							"attack": "q.get_equipped_item_name == 'crimson_scythe' && v.attack_time"
+						}
+					]
+				},
+				"attack":{
+					"transitions": [
+						{
+							"default": "!v.attack_time || q.get_equipped_item_name != 'crimson_scythe'"
+						}
+					],
+					"on_entry": [
+						"/function weapon/weapon_attack"
+					]
+				}
+			}
+		}
+	}
+}

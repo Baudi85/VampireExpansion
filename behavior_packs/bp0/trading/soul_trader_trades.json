@@ -1,0 +1,546 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:coal",
+                  "quantity": 8
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:copper_ingot",
+                  "quantity": 4
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:quartz",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:iron_ingot",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:gold_ingot",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 8
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 16
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:netherite_ingot",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:amethyst_shard",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:firework_rocket",
+                  "quantity": 8
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:name_tag",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:saddle",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 8
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:experience_bottle",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 16
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:totem_of_undying",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 16
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_golden_apple",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:nether_star",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "efficiency",
+                          "level": 5
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "unbreaking",
+                          "level": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "fortune",
+                          "level": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "silk_touch",
+                          "level": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "mending",
+                          "level": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "protection",
+                          "level": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "sharpness",
+                          "level": 5
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "power",
+                          "level": 5
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "infinity",
+                          "level": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

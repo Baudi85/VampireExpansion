@@ -1,0 +1,1 @@
+execute at @s[hasitem={item=overtales:crimson_scythe,location=slot.weapon.mainhand}] run damage @e[r=3,family=monster] 10 entity_attack entity @s

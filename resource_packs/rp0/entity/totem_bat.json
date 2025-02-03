@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:totem_bat",
+			"geometry": {
+				"default": "geometry.totem_bat.geo"
+			},
+			"textures": {
+				"default": "textures/entity/totem_bat"
+			},
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"render_controllers": [
+				"controller.render.overtales"
+			],
+			"animations": {
+				"lookat": "animation.entity.lookat",
+				"death": "animation.entity.death",
+				"idle": "animation.totem_bat.idle",
+				"walk": "animation.totem_bat.walk",
+				"attack": "animation.totem_bat.attack",
+				"spawn": "animation.totem_bat.spawn",
+				"despawn": "animation.totem_bat.despawn",
+				"ac_attack": "controller.animation.totem_summon.attack",
+				"ac": "controller.animation.totem_summon"
+			},
+			"scripts": {
+				"animate": [
+					"lookat",
+					"idle",
+					{
+						"walk": "query.modified_move_speed"
+					},
+					{
+						"death": "!q.is_alive"
+					},
+					"ac_attack",
+					"ac"
+				]
+			}
+		}
+	}
+}

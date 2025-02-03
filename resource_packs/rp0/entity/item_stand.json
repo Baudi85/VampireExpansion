@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:item_stand",
+			"geometry": {
+				"default": "geometry.item_stand.geo"
+			},
+			"textures": {
+				"default": "textures/entity/item_stand"
+			},
+			"materials": {
+				"default": "entity_alphablend"
+			},
+			"render_controllers": [
+				"controller.render.overtales.assets"
+			],
+			"spawn_egg": {
+				"texture": "item_stand"
+			},
+			"animations": {
+				"set": "animation.assets.set",
+				"death": "animation.assets.death",
+				"idle": "animation.assets.item_stand.display"
+			},
+			"scripts": {
+				"animate": [
+					"set",
+					"idle",
+					{
+						"death": "!q.is_alive"
+					}
+				]
+			},
+			"enable_attachables": true
+		}
+	}
+}

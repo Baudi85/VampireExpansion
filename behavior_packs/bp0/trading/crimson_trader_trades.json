@@ -1,0 +1,713 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:golden_shovel",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "efficiency",
+                          "level": 5
+                        },
+                        {
+                          "id": "unbreaking",
+                          "level": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:soul_sand",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_fruit",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 16
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_sword",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§9+8 Attack Damage",
+                        "§r§7Durability 1500"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_dual_sword",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§9+6 Attack Damage",
+                        "§r§7Durability 2500"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_battle_axe",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§9+20 Attack Damage",
+                        "§r§7Durability 2000"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_scythe",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§9+10 Attack Damage",
+                        "§r§7Durability 1500"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 6
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_dagger",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§9+4 Attack Damage",
+                        "§r§7Throwable"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_orb",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [" ", "§r§9+2 Attack Damage", "§r§7Unbreakable"]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_wand",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [" ", "§r§9+4 Attack Damage", "§r§7Unbreakable"]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_staff",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [" ", "§r§9+10 Attack Damage", "§r§7Unbreakable"]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:crimson_pearl",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [" ", "§r§7Unbreakable"]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:illusion_shard",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [" ", "§r§7Unbreakable"]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 16
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:totem_bat",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [" ", "§r§9Summon bat spirit", "§r§7Unbreakable"]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 32
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:totem_wolf",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [" ", "§r§9Summon wolf spirit", "§r§7Unbreakable"]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:totem_archer",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§9Summon archer spirit",
+                        "§r§7Unbreakable"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "overtales:totem_warrior",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§9Summon warrior spirit",
+                        "§r§7Unbreakable"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 6
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:spawn_egg",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_actor_id",
+                      "id": "overtales:crimson_bat"
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 6
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:spawn_egg",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_actor_id",
+                      "id": "overtales:crimson_horse"
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:chainmail_helmet",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§7+ Strength III",
+                        "§r§7+ Resistance IV",
+                        "§r§7+ Fire Resistance",
+                        "§r§7+ Night Vision"
+                      ]
+                    },
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "protection",
+                          "level": 4
+                        },
+                        {
+                          "id": "mending",
+                          "level": 1
+                        },
+                        {
+                          "id": "unbreaking",
+                          "level": 3
+                        },
+                        {
+                          "id": "thorns",
+                          "level": 3
+                        },
+                        {
+                          "id": "aqua_affinity",
+                          "level": 1
+                        },
+                        {
+                          "id": "respiration",
+                          "level": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:chainmail_chestplate",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§7+ Strength III",
+                        "§r§7+ Resistance IV",
+                        "§r§7+ Fire Resistance",
+                        "§r§7+ Night Vision"
+                      ]
+                    },
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "protection",
+                          "level": 4
+                        },
+                        {
+                          "id": "mending",
+                          "level": 1
+                        },
+                        {
+                          "id": "unbreaking",
+                          "level": 3
+                        },
+                        {
+                          "id": "thorns",
+                          "level": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:chainmail_leggings",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§7+ Strength III",
+                        "§r§7+ Resistance IV",
+                        "§r§7+ Fire Resistance",
+                        "§r§7+ Night Vision"
+                      ]
+                    },
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "protection",
+                          "level": 4
+                        },
+                        {
+                          "id": "mending",
+                          "level": 1
+                        },
+                        {
+                          "id": "unbreaking",
+                          "level": 3
+                        },
+                        {
+                          "id": "thorns",
+                          "level": 3
+                        },
+                        {
+                          "id": "soul_speed",
+                          "level": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            },
+            {
+              "wants": [
+                {
+                  "item": "overtales:monster_soul",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:chainmail_boots",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        " ",
+                        "§r§7+ Strength III",
+                        "§r§7+ Resistance IV",
+                        "§r§7+ Fire Resistance",
+                        "§r§7+ Night Vision"
+                      ]
+                    },
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "protection",
+                          "level": 4
+                        },
+                        {
+                          "id": "mending",
+                          "level": 1
+                        },
+                        {
+                          "id": "unbreaking",
+                          "level": 3
+                        },
+                        {
+                          "id": "feather_falling",
+                          "level": 4
+                        },
+                        {
+                          "id": "soul_speed",
+                          "level": 3
+                        },
+                        {
+                          "id": "thorns",
+                          "level": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": -1,
+              "reward_exp": false,
+              "trader_exp": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

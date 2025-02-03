@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:skeleton_sculpture",
+			"geometry": {
+				"default": "geometry.skeleton_sculpture.geo"
+			},
+			"textures": {
+				"default": "textures/entity/skeleton_sculpture"
+			},
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"render_controllers": [
+				"controller.render.overtales"
+			],
+			"spawn_egg": {
+				"texture": "skeleton_sculpture"
+			},
+			"animations": {
+				"set": "animation.assets.set"
+			},
+			"scripts": {
+				"animate": [
+					"set"
+				]
+			}
+		}
+	}
+}

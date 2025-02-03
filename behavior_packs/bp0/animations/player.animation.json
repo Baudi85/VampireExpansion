@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.player.crimson_armor_cd": {
+			"animation_length": 2,
+			"loop": true,
+			"timeline": {
+				"0":[
+					"/effect @s night_vision 16 0 true",
+					"/effect @s strength 16 2 true",
+					"/effect @s resistance 16 3 true",
+					"/effect @s fire_resistance 16 0 true"
+				]
+			}
+		},
+		"animation.player.weapon_cd": {
+			"animation_length": 2,
+			"loop": true,
+			"timeline": {
+				"0":[
+					"/execute at @s[hasitem={item=overtales:crimson_dual_sword,location=slot.weapon.mainhand}] run effect @s speed 16 0 true",
+					"/execute at @s[hasitem={item=overtales:crimson_battle_axe,location=slot.weapon.mainhand}] run effect @s slowness 16 0 true",
+					"/execute at @s[hasitem={item=overtales:crimson_scythe,location=slot.weapon.mainhand}] run effect @s slowness 16 0 true"
+				]
+			}
+		},
+		"animation.player.weapon.cd.8": {
+			"animation_length": 0.8,
+			"loop": true
+		},
+		"animation.player.weapon.cd.16": {
+			"animation_length": 1.2,
+			"loop": true
+		},
+		"animation.player.weapon.cd.32": {
+			"animation_length": 2.4,
+			"loop": true
+		}
+	}
+}

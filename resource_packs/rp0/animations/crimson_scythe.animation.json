@@ -1,0 +1,457 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.crimson_scythe.3.hold": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": [0, 30, 0]
+				},
+				"leftArm": {
+					"rotation": [0, 0, -15]
+				},
+				"rightArm": {
+					"rotation": [38, 15, 15]
+				},
+				"rightItem": {
+					"rotation": [45, 0, 0],
+					"position": [0, 4.75, 2]
+				}
+			}
+		},
+		"animation.player.crimson_scythe.1.attack1": {
+			"animation_length": 0.6,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-90, 30, -90],
+							"post": [-90, 30, -90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [-45, 60, -135],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [45, 53, -135],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [45, 53, -135],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-2, 4.5, 2.5],
+							"post": [-2, 4.5, 2.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [6, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [12, 0.5, -1.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [12, 0.5, -1.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.15": [1, 1, 1],
+						"0.2": [1, 1.25, 1.25],
+						"0.3": [1, 1, 1],
+						"0.6": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_scythe.1.attack2": {
+			"animation_length": 0.6,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [0, 53, -45],
+							"post": [0, 53, -45],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [38, 53, -90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [98, 53, -90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [98, 53, -90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.45": {
+							"post": [38, 53, -90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [0, 3.5, 1.5],
+							"post": [0, 3.5, 1.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [12, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [20, 3.5, 1.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [20, 3.5, 1.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.45": {
+							"post": [12, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.1": [1, 1.25, 1.25],
+						"0.3": [1, 1.25, 1.25],
+						"0.45": [1, 1, 1],
+						"0.6": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_scythe.1.attack3": {
+			"animation_length": 0.6,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-45, -53, 135],
+							"post": [-45, -53, 135],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [15, -45, 135],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [45, -35, 135],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [90, 0, 90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [24, 2.5, 1.5],
+							"post": [24, 2.5, 1.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [12, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [-3, 2.5, 1.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.1": [1, 1, 1],
+						"0.2": [1, 1.25, 1.25],
+						"0.3": [1, 1, 1],
+						"0.6": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_scythe.3.attack1": {
+			"animation_length": 0.6,
+			"bones": {
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [30, -45, 0],
+							"post": [30, -45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [30, -30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [-15, 15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [38, -15, 0],
+							"post": [38, -15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [38, -15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [-15, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": [-180, -30, 120],
+						"0.2": [-180, -30, 120],
+						"0.3": {
+							"pre": [-15, -15, 100],
+							"post": [-15, -15, 100],
+							"lerp_mode": "catmullrom"
+						},
+						"0.45": {
+							"post": [0, 0, 90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_scythe.3.attack2": {
+			"animation_length": 0.6,
+			"bones": {
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-15, 30, 0],
+							"post": [-15, 30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [15, -60, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [15, -60, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [0, -15, -15],
+							"post": [0, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [0, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [30, -15, -5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [30, -15, -5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-60, 135, 60],
+							"post": [-60, 135, 60],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [-60, 135, 60],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [90, 180, 90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.35": {
+							"post": [90, 180, 90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": {
+							"post": [30, 135, 90],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_scythe.3.attack3": {
+			"animation_length": 0.6,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.35": {
+							"post": [0, -360, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, -360, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.15": {
+							"pre": [0, 4, 0],
+							"post": [0, 4, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [0, 4, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.35": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				},
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": {
+							"post": [30, -60, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-60, 0, 0],
+							"post": [-60, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [-60, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [-60, 0, -30],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [60, 0, -30],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [0, 0, 60],
+							"post": [0, 0, 60],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [0, 0, 60],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": {
+							"post": [-135, -15, 75],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2": {
+							"pre": [-45, -30, 0],
+							"post": [-45, -30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2": {
+							"pre": [45, -30, 0],
+							"post": [45, -30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

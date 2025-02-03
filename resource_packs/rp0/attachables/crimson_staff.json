@@ -1,0 +1,45 @@
+{
+   "format_version": "1.10.0",
+   "minecraft:attachable": {
+      "description": {
+         "identifier": "overtales:crimson_staff",
+         "geometry": {
+            "default": "geometry.mesh_item.geo"
+         },
+         "textures": {
+            "default": "textures/items/crimson_staff"
+         },
+         "materials": {
+            "default": "entity_alphatest"
+         },
+         "render_controllers": [
+            "controller.render.overtales"
+         ],
+         "animations": {
+            "set": "animation.mesh_item.set",
+            "run": "animation.player.weapon.run",
+            "swing": "animation.player.weapon.swing",
+            "attack": "animation.player.weapon.range.1.attack",
+            "charge": "animation.player.weapon.range.1.charge",
+            "shoot": "animation.player.crimson_staff.1.shoot",
+            "cd": "animation.player.weapon.range.cd_32",
+            "ac": "controller.animation.weapon_attack_range",
+            "ac_run": "controller.animation.player.weapon_run"
+         },
+         "scripts": {
+            "animate": [
+               "set",
+               {
+                  "ac": "c.is_first_person"
+               },
+               {
+                  "ac_run": "c.is_first_person"
+               }
+            ],
+				"pre_animation": [
+					"variable.attack_time = c.owning_entity -> v.attack_time;"
+				]
+         }
+      }
+   }
+}

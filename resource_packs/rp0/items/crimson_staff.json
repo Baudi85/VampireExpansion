@@ -1,0 +1,14 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:item": {
+      "description": {
+         "identifier": "overtales:crimson_staff",
+         "category": "Equipment"
+      },
+      "components": {
+         "minecraft:icon": "crimson_staff",
+         "minecraft:use_animation": "bow",
+         "minecraft:render_offsets": "apple"
+      }
+   }
+}

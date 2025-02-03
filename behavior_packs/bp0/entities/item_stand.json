@@ -1,0 +1,258 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "overtales:item_stand",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"drop": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"max_wait_time": 0,
+							"min_wait_time": 0,
+							"num_to_spawn": 1,
+							"single_use": true,
+							"spawn_item": "overtales:item_stand_spawn_egg"
+						}
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"item_stand",
+					"inanimate",
+					"mob"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 1.25
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 1,
+						"height": 1,
+						"pivot": [
+							0,
+							0.5,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:nameable": {},
+			"minecraft:persistent": {},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": true,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"test": "is_sneaking",
+											"subject": "player",
+											"value": true
+										}
+									]
+								}
+							],
+							"event": "drop"
+						}
+					},
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:inventory": {
+				"inventory_size": 1
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"any_of": [
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "player",
+												"value": "overtales:crimson_sword"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "player",
+												"value": "overtales:crimson_dual_sword"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "player",
+												"value": "overtales:crimson_battle_axe"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "player",
+												"value": "overtales:crimson_scythe"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "player",
+												"value": "overtales:crimson_dagger"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "player",
+												"value": "overtales:crimson_orb"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "player",
+												"value": "overtales:crimson_wand"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "player",
+												"value": "overtales:crimson_staff"
+											},
+											//self
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "self",
+												"value": "overtales:crimson_sword"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "self",
+												"value": "overtales:crimson_dual_sword"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "self",
+												"value": "overtales:crimson_battle_axe"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "self",
+												"value": "overtales:crimson_scythe"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "self",
+												"value": "overtales:crimson_dagger"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "self",
+												"value": "overtales:crimson_orb"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "self",
+												"value": "overtales:crimson_wand"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"operator": "==",
+												"subject": "self",
+												"value": "overtales:crimson_staff"
+											}
+										]
+									}
+								]
+							}
+						},
+						"give_item": true,
+						"take_item": true,
+						"interact_text": "action.interact.armorstand.equip"
+					}
+				]
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"drop": {
+				"add": {
+				   "component_groups": [
+					  "drop",
+					  "despawn"
+				   ]
+				}
+			}
+		}
+	}
+}

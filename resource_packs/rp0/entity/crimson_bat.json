@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:crimson_bat",
+			"geometry": {
+				"default": "geometry.crimson_bat.geo"
+			},
+			"textures": {
+				"default": "textures/entity/crimson_bat"
+			},
+			"materials": {
+				"default": "entity_alphatest",
+				"dye": "entity_alphatest_change_color"
+			},
+			"render_controllers": [
+				"controller.render.overtales.crimson_bat"
+			],
+			"spawn_egg": {
+				"base_color": "#444444",
+				"overlay_color": "#e8a074"
+			},
+			"animations": {
+				"lookat": "animation.entity.lookat",
+				"idle": "animation.totem_bat.idle",
+				"walk": "animation.totem_bat.walk"
+			},
+			"scripts": {
+				"animate": [
+					"lookat",
+					"idle",
+					{
+						"walk": "query.modified_move_speed"
+					}
+				]
+			}
+		}
+	}
+}

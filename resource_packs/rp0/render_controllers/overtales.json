@@ -1,0 +1,215 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.overtales": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.default"
+			]
+		},
+		"controller.render.overtales.assets": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.default"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.overtales.ignore_lighting": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.default"
+			],
+			"ignore_lighting": true
+		},
+		"controller.render.overtales.soul": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.default"
+			],
+			"is_hurt_color": {
+				"r": "1",
+				"g": "1",
+				"b": "1",
+				"a": "0.25"
+			},
+			"on_fire_color": {
+				"r": "1",
+				"g": "1",
+				"b": "1",
+				"a": "0.25"
+			}
+		},
+		"controller.render.overtales.soul_creeper": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.default"
+			],
+			"is_hurt_color": {
+				"r": "1",
+				"g": "1",
+				"b": "1",
+				"a": "0.25"
+			},
+			"on_fire_color": {
+				"r": "1",
+				"g": "1",
+				"b": "1",
+				"a": "0.25"
+			},
+			"overlay_color": {
+				"r": "((variable.flash == 0) || (query.swelling_dir < 0)) ? this : 0",
+				"g": "((variable.flash == 0) || (query.swelling_dir < 0)) ? this : 0",
+				"b": "((variable.flash == 0) || (query.swelling_dir < 0)) ? this : 0",
+				"a": "((variable.flash == 0) || (query.swelling_dir < 0)) ? this : 0.5"
+			}
+		},
+		"controller.render.crimson_horse": {
+			"part_visibility": [
+				{
+					"*saddle*": "query.is_saddled"
+				},
+				{
+					"head_saddle": "query.is_saddled && query.has_rider"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"Array.base": [
+						"Texture.default",
+						"Texture.variant1"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.base[query.variant]"
+			]
+		},
+		"controller.render.mesh_texture": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "variable.is_enchanted ? material.enchanted : material.default"
+				}
+			],
+			"textures": [
+				"Texture.default",
+				"texture.enchanted"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.overtales.mesh_item_fake": {
+			"geometry": "Geometry.mesh_item_fake",
+			"materials": [
+				{
+					"*": "Material.mesh_item_fake"
+				}
+			],
+			"textures": [
+				"Texture.mesh_item_fake"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.overtales.soul_pillager_weapon_right": {
+			"geometry": "Geometry.soul_pillager_weapon_right",
+			"materials": [
+				{
+					"*": "Material.soul_pillager_weapon"
+				}
+			],
+			"textures": [
+				"Texture.soul_pillager_weapon_right"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.overtales.soul_pillager_weapon_left": {
+			"geometry": "Geometry.soul_pillager_weapon_left",
+			"materials": [
+				{
+					"*": "Material.soul_pillager_weapon"
+				}
+			],
+			"textures": [
+				"Texture.soul_pillager_weapon_left"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.overtales.crimson_bat": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				},
+				{
+					"dye": "Material.dye"
+				}
+			],
+			"textures": [
+				"Texture.default"
+			],
+			"part_visibility": [
+				{
+					"chests": "q.is_chested"
+				},
+				{
+					"dye": "q.is_tamed"
+				}
+			]
+		},
+		"controller.render.overtales.illusion_shard": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.default"
+			],
+			"ignore_lighting": true,
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {
+				"r": "((variable.flash == 1) || (query.swelling_dir < 0)) ? this : 1",
+				"g": "((variable.flash == 1) || (query.swelling_dir < 0)) ? this : 1",
+				"b": "((variable.flash == 1) || (query.swelling_dir < 0)) ? this : 1",
+				"a": "((variable.flash == 1) || (query.swelling_dir < 0)) ? this : 0.5"
+			}
+		}
+	}
+}

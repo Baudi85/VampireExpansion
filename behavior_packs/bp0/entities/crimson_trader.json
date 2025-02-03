@@ -1,0 +1,199 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "overtales:crimson_trader",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"command": "controller.animation.command_crimson_trader"
+			},
+			"scripts": {
+				"animate": [
+					"command"
+				]
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"respawn": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"max_wait_time": 0,
+							"min_wait_time": 0,
+							"single_use": true,
+							"num_to_spawn": 1,
+							"spawn_entity": "overtales:crimson_trader"
+						}
+					]
+				}
+			},
+			"tutorial": {
+				"minecraft:mark_variant": {
+					"value": 1
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"cause": "all",
+							"deals_damage": false
+						}
+					]
+				},
+				"minecraft:type_family": {
+					"family": [
+						"npc",
+						"tutorial",
+						"trader"
+					]
+				}
+			},
+			"trade": {
+				"minecraft:behavior.random_stroll": {
+					"priority": 7,
+					"speed_multiplier": 0.6
+				},
+				"minecraft:behavior.trade_interest": {
+					"priority": 5,
+					"within_radius": 6.0,
+					"interest_time": 45.0,
+					"remove_item_time": 1.0,
+					"carried_item_switch_time": 2.0,
+					"cooldown": 2.0
+				},
+				"minecraft:economy_trade_table": {
+					"display_name": "display.name.crimson_trader",
+					"table": "trading/crimson_trader_trades.json",
+					"new_screen": true,
+					"persist_trades": true
+				},
+				"minecraft:behavior.trade_with_player": {
+					"priority": 1
+				},
+				"minecraft:behavior.look_at_trading_player": {
+					"priority": 2
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"crimson_trader",
+					"trader"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.9
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:health": {
+				"value": 500
+			},
+			"minecraft:behavior.drink_potion": {
+				"potions": [
+					{
+						"filters": {
+							"test": "is_missing_health",
+							"subject": "self",
+							"value": true
+						},
+						"chance": 1,
+						"id": 22
+					}
+				]
+			},
+			"minecraft:nameable": {
+				"always_show": true
+			},
+			"minecraft:behavior.panic": {
+				"priority": 1,
+				"speed_multiplier": 0.6
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 10
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 8,
+				"look_distance": 16,
+				"probability": 0.02,
+				"look_time": [
+					4,
+					8
+				]
+			},
+			"minecraft:scale": {
+				"value": 0.96
+			},
+			"minecraft:movement": {
+				"value": 0.3
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_pass_doors": true,
+				"can_open_doors": true,
+				"avoid_water": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"trade"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"tutorial"
+					]
+				}
+			},
+			"minecraft:entity_born": {
+				"trigger": "minecraft:entity_spawned"
+			},
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"respawn": {
+				"add": {
+					"component_groups": [
+						"respawn"
+					]
+				}
+			},
+			"tutorial": {
+				"add": {
+					"component_groups": [
+						"tutorial"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"trade"
+					]
+				}
+			}
+		}
+	}
+}

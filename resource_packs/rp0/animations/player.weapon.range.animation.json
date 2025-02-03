@@ -1,0 +1,661 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.weapon.range.1.attack": {
+			"animation_length": 0.41667,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": {
+							"pre": [-15, 15, -15],
+							"post": [-15, 15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.0833": {
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2083": [98, -15, -15],
+						"0.3333": [98, 15, 15],
+						"0.4167": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.0417": {
+							"pre": [-2, 2, -2],
+							"post": [-2, 2, -2],
+							"lerp_mode": "catmullrom"
+						},
+						"0.0833": {
+							"post": [10, -1, 2],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2083": [10, -1, 2],
+						"0.4167": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.0417": [1, 1, 1],
+						"0.0833": [1, 1.25, 1.25],
+						"0.4167": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.player.weapon.range.3.attack": {
+			"animation_length": 0.4167,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": {
+							"pre": [-15, 15, -15],
+							"post": [-15, 15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.0833": {
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2083": [98, -15, -15],
+						"0.3333": [98, 15, 15],
+						"0.4167": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.0417": {
+							"pre": [-2, 2, -2],
+							"post": [-2, 2, -2],
+							"lerp_mode": "catmullrom"
+						},
+						"0.0833": {
+							"post": [10, -1, 2],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2083": [10, -1, 2],
+						"0.4167": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.0417": [1, 1, 1],
+						"0.0833": [1, 1.25, 1.25],
+						"0.4167": [1, 1, 1]
+					}
+				},
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": {
+							"pre": [-15, 30, 0],
+							"post": [-15, 30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": [15, -30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": {
+							"pre": [0, 0, -30],
+							"post": [0, 0, -30],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": [30, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": {
+							"pre": [-90, 30, -15],
+							"post": [-90, 30, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": [0, 0, 0]
+					}
+				},
+				"rightItem": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": {
+							"pre": [15, 0, 0],
+							"post": [15, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": [15, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [15, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.weapon.range.1.charge": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"rotation": ["math.cos(q.anim_time*512*1.5)*20", "math.sin(q.anim_time*512*1.5)*15", 0]
+				}
+			}
+		},
+		"animation.player.weapon.range.cd_8": {
+			"loop": true,
+			"animation_length": 0.4
+		},
+		"animation.player.weapon.range.cd_16": {
+			"loop": true,
+			"animation_length": 0.6
+		},
+		"animation.player.weapon.range.cd_32": {
+			"loop": true,
+			"animation_length": 1.2
+		},
+		"animation.player.crimson_dagger.3.hold": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [0, 0, -5]
+				},
+				"rightArm": {
+					"rotation": [-30, -15, 15]
+				}
+			}
+		},
+		"animation.player.crimson_dagger.3.shoot": {
+			"animation_length": 0.4,
+			"bones": {
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-30, 30, 0],
+							"post": [-30, 30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [-30, 30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [30, -30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [0, 15, -30],
+							"post": [0, 15, -30],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [0, 15, -30],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [15, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-160, 30, -60],
+							"post": [-160, 30, -60],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [-160, 30, -60],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [-90, 30, -30],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_dagger.1.shoot": {
+			"animation_length": 0.4,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-15, 15, -15],
+							"post": [-15, 15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": [160, -15, -15]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-2, 2, -2],
+							"post": [-2, 2, -2],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [10, -1, 2],
+							"lerp_mode": "catmullrom"
+						},
+						"0.35": {
+							"post": [10, -24, 10],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": [10, -6, 12]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_wand.3.hold": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [0, 0, -5]
+				},
+				"rightArm": {
+					"rotation": [-30, -15, 15]
+				}
+			}
+		},
+		"animation.player.crimson_wand.3.shoot": {
+			"animation_length": 0.4,
+			"bones": {
+				"waist": {
+					"rotation": {
+						"0.0": [5, -15, 0],
+						"0.05": {
+							"pre": [5, -15, 0],
+							"post": [5, -15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [5, -15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [-15, -15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [30, 0, 0],
+						"0.4": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-60, 15, 0],
+						"0.05": {
+							"pre": [-60, 15, 0],
+							"post": [-60, 15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [-60, 15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": [0, 0, 0]
+					}
+				},
+				"rightItem": {
+					"rotation": {
+						"0.0": [45, 0, 0],
+						"0.3": [45, 0, 0],
+						"0.4": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_wand.1.shoot": {
+			"animation_length": 0.4,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [90, -15, -15],
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [105, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [2, -2.5, -1.25],
+							"post": [2, -2.5, -1.25],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [2, -2.5, -1.25],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [-2, 2.5, 1.25],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_staff.3.hold": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [0, 0, -5]
+				},
+				"rightArm": {
+					"rotation": [-75, 15, 0]
+				}
+			}
+		},
+		"animation.player.crimson_staff.3.shoot": {
+			"animation_length": 1.2,
+			"bones": {
+				"waist": {
+					"rotation": {
+						"0.0": [15, -30, 0],
+						"0.1": {
+							"pre": [15, -30, 0],
+							"post": [15, -30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [-15, -30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.45": {
+							"post": [-15, -30, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.75": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.2": [0, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-90, 45, 0],
+						"0.05": {
+							"pre": [-90, 45, 0],
+							"post": [-90, 45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [-90, 45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [-90, 45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [-90, 45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [-90, 45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.8": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.2": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, -15, 0],
+						"0.05": {
+							"pre": [0, -15, 0],
+							"post": [0, -15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [0, -15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [0, -15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [0, -15, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.8": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.2": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_staff.3.set": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"position": [0, 0, 6]
+				}
+			}
+		},
+		"animation.player.crimson_staff.1.shoot": {
+			"animation_length": 1.2,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [90, -15, -15],
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [90, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [105, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [-15, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.2": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [2, -2.5, -1.25],
+							"post": [2, -2.5, -1.25],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [2, -2.5, -1.25],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [-2, 2.5, 1.25],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": [0, 0, 0],
+						"1.2": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_orb.3.hold": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [0, 0, -5]
+				},
+				"rightArm": {
+					"rotation": [-75, 0, 0]
+				}
+			}
+		},
+		"animation.player.crimson_orb.3.shoot": {
+			"animation_length": 0.6,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1": ["math.cos(q.anim_time*512*2)*15 ", "math.sin(q.anim_time*512*2)*15", 0],
+						"0.5": ["math.cos(q.anim_time*512*2)*15 ", "math.sin(q.anim_time*512*2)*15", 0],
+						"0.6": [0, 0, 0]
+					}
+				},
+				"rightItem": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.05": [0.5, 0.5, 0.5],
+						"0.1": [0.5, 0.5, 0.5],
+						"0.15": [0.5, 0.5, 0.5],
+						"0.25": [1.25, 1.25, 1.25],
+						"0.35": [1, 1, 1],
+						"0.6": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.player.crimson_orb.3.set": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [0, 0, "math.abs(q.anim_time*38.7)*2"],
+					"position": [0, 0, "math.cos(q.anim_time*38.7*4)*1-3"],
+					"scale": [0.75, 0.75, 0.75]
+				}
+			}
+		},
+		"animation.player.crimson_orb.1.shoot": {
+			"animation_length": 0.6,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-15, -15, -15],
+							"post": [-15, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1": {
+							"post": [-15, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [-15, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [-15, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [-15, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.35": {
+							"post": [15, -15, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.45": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.05": {
+							"pre": [-2, 5.25, 2.5],
+							"post": [-2, 5.25, 2.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [-2, 5.25, 2.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": {
+							"post": [1, -1.75, -0.75],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

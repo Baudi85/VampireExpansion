@@ -1,0 +1,307 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "overtales:totem_warrior": {
+        "events": {
+          "ambient": "mob.allay.idle",
+          "death": "mob.allay.death",
+          "hurt": "mob.allay.hurt",
+          "step": {
+            "sound": "mob.piglin_brute.step",
+            "volume": 0.35
+          }
+        },
+        "pitch": [0.3, 0.7],
+        "volume": 1
+      },
+      "overtales:totem_archer": {
+        "events": {
+          "ambient": "mob.allay.idle",
+          "death": "mob.allay.death",
+          "hurt": "mob.allay.hurt",
+          "shoot": "mob.snowgolem.shoot",
+          "step": {
+            "sound": "mob.zombie.step",
+            "pitch": 0,
+            "volume": 0
+          }
+        },
+        "pitch": [0.4, 0.8],
+        "volume": 1
+      },
+      "overtales:totem_wolf": {
+        "events": {
+          "ambient": "mob.allay.idle",
+          "death": "mob.allay.death",
+          "hurt": "mob.allay.hurt",
+          "step": {
+            "sound": "mob.wolf.step",
+            "volume": 1
+          }
+        },
+        "pitch": [0.5, 0.9],
+        "volume": 1
+      },
+      "overtales:totem_bat": {
+        "events": {
+          "ambient": "mob.allay.idle",
+          "death": "mob.allay.death",
+          "hurt": "mob.allay.hurt",
+          "step": {
+            "sound": "mob.zombie.step",
+            "pitch": 0,
+            "volume": 0
+          }
+        },
+        "pitch": [0.8, 1],
+        "volume": 1
+      },
+      "overtales:crimson_bat": {
+        "events": {
+          "ambient": "mob.bat.idle",
+          "death": "mob.bat.death",
+          "hurt": "mob.bat.hurt",
+          "eat": {
+            "sound": "mob.cat.eat",
+            "volume": [0.5, 1]
+          }
+        },
+        "pitch": [0.25, 0.4],
+        "volume": 0.1
+      },
+      "overtales:crimson_horse": {
+        "events": {
+          "ambient": "mob.horse.donkey.idle",
+          "breathe": {
+            "pitch": 1.0,
+            "sound": "mob.horse.breathe",
+            "volume": 0.7
+          },
+          "death": "mob.horse.donkey.death",
+          "eat": {
+            "pitch": [0.8, 1.2],
+            "sound": "mob.horse.eat",
+            "volume": [0.5, 1.5]
+          },
+          "hurt": "mob.horse.donkey.hit",
+          "jump": {
+            "pitch": 1.0,
+            "sound": "mob.horse.jump",
+            "volume": 0.4
+          },
+          "land": {
+            "pitch": 1.0,
+            "sound": "mob.horse.land",
+            "volume": 0.4
+          },
+          "mad": "mob.horse.donkey.angry",
+          "saddle": {
+            "pitch": 1.0,
+            "sound": "mob.horse.leather",
+            "volume": 0.5
+          }
+        },
+        "pitch": [0.4, 0.8],
+        "volume": 0.8
+      },
+      "overtales:soul_zombie": {
+        "events": {
+          "ambient": "mob.zombie.say",
+          "death": "mob.zombie.death",
+          "hurt": "mob.zombie.hurt",
+          "step": {
+            "sound": "mob.zombie.step",
+            "pitch": 0,
+            "volume": 0
+          },
+          "attack": "bloom.sculk_catalyst"
+        },
+        "pitch": [0.7, 1],
+        "volume": 1
+      },
+      "overtales:soul_skeleton": {
+        "events": {
+          "ambient": "mob.skeleton.say",
+          "death": "mob.skeleton.death",
+          "hurt": {
+            "sound": "mob.skeleton.hurt",
+            "volume": 0.7
+          },
+          "step": {
+            "sound": "mob.skeleton.step",
+            "pitch": 0,
+            "volume": 0
+          },
+          "attack": "bloom.sculk_catalyst",
+          "shoot": "mob.snowgolem.shoot"
+        },
+        "pitch": [0.7, 1],
+        "volume": 1
+      },
+      "overtales:soul_spider": {
+        "events": {
+          "ambient": "mob.spider.say",
+          "death": "mob.spider.death",
+          "hurt": "mob.spider.say",
+          "step": {
+            "sound": "mob.spider.step",
+            "pitch": 0,
+            "volume": 0
+          },
+          "attack": "bloom.sculk_catalyst"
+        },
+        "pitch": [0.6, 1],
+        "volume": 1
+      },
+      "overtales:soul_enderman": {
+        "events": {
+          "ambient": "mob.endermen.idle",
+          "death": {
+            "sound": "mob.endermen.death",
+            "pitch": 0.7,
+            "volume": 0.5
+          },
+          "hurt": "mob.endermen.hit",
+          "mad": "mob.endermen.scream",
+          "stare": {
+            "pitch": 1.2,
+            "sound": "mob.endermen.stare",
+            "volume": 1
+          },
+          "step": {
+            "sound": "mob.zombie.step",
+            "pitch": 0,
+            "volume": 0
+          },
+          "attack": "bloom.sculk_catalyst"
+        },
+        "pitch": [0.6, 1],
+        "volume": 1
+      },
+      "overtales:soul_creeper": {
+        "events": {
+          "death": "mob.creeper.death",
+          "fuse": {
+            "pitch": 0.5,
+            "sound": "random.fuse",
+            "volume": 1
+          },
+          "hurt": "mob.creeper.say",
+          "step": {
+            "sound": "mob.zombie.step",
+            "pitch": 0,
+            "volume": 0
+          },
+          "attack": "bloom.sculk_catalyst"
+        },
+        "pitch": [0.6, 1],
+        "volume": 1
+      },
+      "overtales:soul_pillager": {
+        "events": {
+          "ambient": "mob.vindicator.idle",
+          "death": "mob.vindicator.death",
+          "hurt": "mob.vindicator.hurt",
+          "attack": "bloom.sculk_catalyst",
+          "shoot": "mob.snowgolem.shoot",
+          "step": {
+            "sound": "mob.zombie.step",
+            "pitch": 0,
+            "volume": 0
+          }
+        },
+        "pitch": [0.4, 0.8],
+        "volume": 1
+      },
+      "overtales:crimson_trader": {
+        "events": {
+          "ambient": "mob.wanderingtrader.idle",
+          "death": "mob.wanderingtrader.death",
+          "disappeared": "mob.wanderingtrader.disappeared",
+          "drink": {
+            "sound": "mob.wanderingtrader.drink_potion",
+            "pitch": 1,
+            "volume": 1
+          },
+          "drink.milk": {
+            "sound": "mob.wanderingtrader.drink_milk",
+            "pitch": 1,
+            "volume": 1
+          },
+          "haggle": "mob.wanderingtrader.haggle",
+          "haggle.no": "mob.wanderingtrader.no",
+          "haggle.yes": "mob.wanderingtrader.yes",
+          "hurt": "mob.wanderingtrader.hurt",
+          "reappeared": "mob.wanderingtrader.reappeared"
+        },
+        "pitch": [0.5, 0.75],
+        "volume": 1.0
+      },
+      "overtales:soul_trader": {
+        "events": {
+          "ambient": "mob.wanderingtrader.idle",
+          "death": "mob.wanderingtrader.death",
+          "disappeared": "mob.wanderingtrader.disappeared",
+          "drink": {
+            "sound": "mob.wanderingtrader.drink_potion",
+            "pitch": 1,
+            "volume": 1
+          },
+          "drink.milk": {
+            "sound": "mob.wanderingtrader.drink_milk",
+            "pitch": 1,
+            "volume": 1
+          },
+          "haggle": "mob.wanderingtrader.haggle",
+          "haggle.no": "mob.wanderingtrader.no",
+          "haggle.yes": "mob.wanderingtrader.yes",
+          "hurt": "mob.wanderingtrader.hurt",
+          "reappeared": "mob.wanderingtrader.reappeared"
+        },
+        "pitch": [0.65, 0.8],
+        "volume": 1.0
+      },
+      "overtales:training_dummy": {
+        "events": {
+          "hurt": {
+            "sound": "dig.fungus",
+            "volume": 1,
+            "pitch": 0.8
+          }
+        }
+      },
+      "overtales:item_stand": {
+        "events": {
+          "death": {
+            "sound": "dig.stone",
+            "volume": 1,
+            "pitch": 1
+          }
+        }
+      }
+    }
+  },
+
+  "interactive_sounds": {
+    "entity_sounds": {
+      "entities": {
+        "overtales:crimson_horse": {
+          "events": {
+            "gallop": {
+              "default": "mob.horse.gallop"
+            },
+            "heavy.step": {
+              "default": "mob.horse.wood"
+            },
+            "step": {
+              "default": "mob.horse.soft",
+              "wood": "mob.horse.wood"
+            }
+          },
+          "pitch": [0.6, 0.9],
+          "volume": 0.45
+        }
+      }
+    }
+  }
+}

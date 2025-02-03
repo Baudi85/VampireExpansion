@@ -1,0 +1,92 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "overtales:crimson_dagger_projectile",
+         "is_spawnable": false,
+         "is_summonable": true,
+         "is_experimental": false,
+         "runtime_identifier": "minecraft:snowball"
+      },
+      "component_groups": {
+         "hit": {
+            "minecraft:type_family": {
+               "family": [
+                  "crimson_dagger_projectile",
+                  "hit",
+                  "projectile"
+               ]
+            }
+         }
+      },
+      "components": {
+         "minecraft:type_family": {
+            "family": [
+               "crimson_dagger_projectile",
+               "projectile"
+            ]
+         },
+         "minecraft:collision_box": {
+            "width": 0.25,
+            "height": 0.25
+         },
+         "minecraft:projectile": {
+            "on_hit": {
+               "definition_event": {
+                  "event_trigger": {
+                     "event": "hit",
+                     "target": "self"
+                  }
+               },
+               "stick_in_ground": {
+                  "shake_time": 0.5
+               },
+               "impact_damage": {
+                  "damage": 4,
+                  "knockback": true,
+                  "semi_random_diff_damage": true,
+                  "destroy_on_hit": true,
+                  "max_critical_damage": 8,
+                  "min_critical_damage": 4,
+                  "power_multiplier": 1
+               },
+               "mob_effect": {
+                  "effect": "wither",
+                  "amplifier": 3,
+                  "durationeasy": 100,
+                  "durationhard": 100,
+                  "durationnormal": 100
+               }
+            },
+            "hit_sound": "item.trident.hit_ground",
+            "power": 2,
+            "gravity": 0.05,
+            "uncertainty_base": 8,
+            "uncertainty_multiplier": 2,
+            "anchor": 1,
+            "should_bounce": true,
+            "offset": [
+               0,
+               0.1,
+               0
+            ],
+            "multiple_targets": false
+         },
+         "minecraft:physics": {},
+         "minecraft:pushable": {
+            "is_pushable": false,
+            "is_pushable_by_piston": true
+         },
+         "minecraft:conditional_bandwidth_optimization": {}
+      },
+      "events": {
+         "hit": {
+            "add": {
+               "component_groups": [
+                  "hit"
+               ]
+            }
+         }
+      }
+   }
+}

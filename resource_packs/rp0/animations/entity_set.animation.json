@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.entity.lookat": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.entity.death": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"root": {
+					"rotation": [0, 0, "Math.min(Math.sqrt(Math.max(0, query.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90"],
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.1": {"pre": [1, 1, 1], "post": [0, 0, 0]},
+						"0.2": {"pre": [0, 0, 0], "post": [1, 1, 1]},
+						"0.3": {"pre": [1, 1, 1], "post": [0, 0, 0]},
+						"0.4": {"pre": [0, 0, 0], "post": [1, 1, 1]},
+						"0.6": {"pre": [1, 1, 1], "post": [0, 0, 0]},
+						"0.8": {"pre": [0, 0, 0], "post": [1, 1, 1]},
+						"1.0": {"pre": [1, 1, 1], "post": [0, 0, 0]},
+						"1.2": {"pre": [0, 0, 0], "post": [1, 1, 1]},
+						"1.4": {"pre": [1, 1, 1], "post": [0, 0, 0]}
+					}
+				}
+			}
+		}
+	}
+}

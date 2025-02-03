@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:particle_fog",
+			"geometry": {
+				"default": "geometry.dummy.geo"
+			},
+			"textures": {
+				"default": "textures/entity/dummy"
+			},
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"render_controllers": [
+				"controller.render.overtales"
+			],
+			"animations": {
+				"particle": "animation.particle_fog",
+				"particle2": "animation.particle_fog2"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"particle2" : "q.time_of_day > 0.25 && q.time_of_day < 0.75"
+					},
+					{
+						"particle" : "(q.time_of_day > 0.0 && q.time_of_day < 0.25) || (q.time_of_day > 0.75 && q.time_of_day < 1)"
+					}
+				]
+			},
+			"particle_effects": {
+				"particle": "overtales:particle_fog",
+				"particle2": "overtales:particle_fog2"
+			}
+		}
+	}
+}

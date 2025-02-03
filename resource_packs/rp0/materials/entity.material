@@ -1,0 +1,22 @@
+{
+    "materials":{
+        "version":"1.0.0",
+        "soul:entity_alphatest":{
+            "+states": ["Blending"],
+            "blendSrc":"One",
+            "blendDst":"OneMinusSrcAlpha"
+        },
+        "charged_soul_creeper:entity_static": {
+            "+defines": [ "USE_UV_ANIM", "ALPHA_TEST" ],
+            "+states": ["Blending", "DisableDepthWrite"],
+            "blendSrc":"SourceAlpha",
+            "blendDst":"One",
+            "+samplerStates": [
+                {
+                    "samplerIndex": 0,
+                    "textureWrap": "Repeat"
+                }
+            ]
+        }
+    }
+}

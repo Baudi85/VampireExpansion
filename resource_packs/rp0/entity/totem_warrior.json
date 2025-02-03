@@ -1,0 +1,49 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:totem_warrior",
+			"geometry": {
+				"default": "geometry.totem_warrior.geo",
+				"mesh_item_fake": "geometry.mesh_item_fake.geo"
+			},
+			"textures": {
+				"default": "textures/entity/totem_warrior",
+				"mesh_item_fake": "textures/items/totem_warrior_sword"
+			},
+			"materials": {
+				"default": "entity_emissive_alpha",
+				"mesh_item_fake": "entity_alphatest"
+			},
+			"render_controllers": [
+				"controller.render.overtales",
+				"controller.render.overtales.mesh_item_fake"
+			],
+			"animations": {
+				"lookat": "animation.entity.lookat",
+				"death": "animation.entity.death",
+				"idle": "animation.totem_warrior.idle",
+				"walk": "animation.totem_warrior.walk",
+				"attack": "animation.totem_warrior.attack",
+				"spawn": "animation.totem_warrior.spawn",
+				"despawn": "animation.totem_warrior.despawn",
+				"ac_attack": "controller.animation.totem_summon.attack",
+				"ac": "controller.animation.totem_summon"
+			},
+			"scripts": {
+				"animate": [
+					"lookat",
+					"idle",
+					{
+						"walk": "query.modified_move_speed"
+					},
+					{
+						"death": "!q.is_alive"
+					},
+					"ac_attack",
+					"ac"
+				]
+			}
+		}
+	}
+}

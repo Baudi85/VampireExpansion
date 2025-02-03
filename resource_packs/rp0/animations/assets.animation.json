@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.assets.set": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, "-query.body_y_rotation + (Math.round(query.body_y_rotation / 90) * 90)", 0]
+				}
+			}
+		},
+		"animation.assets.death": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"root": {
+					"rotation": [0, 0, "Math.min(Math.sqrt(Math.max(0, query.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90"],
+					"scale": [0, 0, 0]
+				}
+			}
+		},
+		"animation.assets.item_stand.display": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": ["7.5-115", 90, 5],
+					"position": [0, "math.cos(q.anim_time*38.7)*1.5+1.5", 0]
+				},
+				"leftitem": {
+					"rotation": ["7.5-115", -90, 5],
+					"position": [0, "-math.cos(q.anim_time*38.7)*1.5+1.5", 3]
+				}
+			}
+		}
+	}
+}

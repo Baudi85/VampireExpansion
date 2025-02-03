@@ -1,0 +1,432 @@
+{
+   "format_version": "1.10.0",
+   "animation_controllers": {
+      "controller.animation.player.weapon_run": {
+         "states": {
+            "default": {
+               "transitions": [
+                  {
+                     "run": "q.is_sprinting"
+                  }
+               ],
+               "blend_transition": 0.1
+            },
+            "run": {
+               "animations": [
+                  "run"
+               ],
+               "transitions": [
+                  {
+                     "default": "!q.is_sprinting"
+                  },
+                  {
+                     "attack": "v.attack_time"
+                  }
+               ],
+               "blend_transition": 0.25
+            },
+            "attack": {
+               "transitions": [
+                  {
+                     "run": "!v.attack_time"
+                  }
+               ],
+               "blend_transition": 0.1
+            }
+         }
+      },
+      "controller.animation.player.weapon_swap": {
+         "states": {
+            "default": {
+               "transitions": [
+                  {
+                     "crimson_sword.swap": "q.get_equipped_item_name == 'crimson_sword'"
+                  },
+                  {
+                     "crimson_battle_axe.swap": "q.get_equipped_item_name == 'crimson_battle_axe'"
+                  },
+                  {
+                     "crimson_scythe.swap": "q.get_equipped_item_name == 'crimson_scythe'"
+                  },
+                  {
+                     "crimson_dual_sword.swap": "q.get_equipped_item_name == 'crimson_dual_sword'"
+                  },
+                  {
+                     "crimson_dagger.swap": "q.get_equipped_item_name == 'crimson_dagger'"
+                  },
+                  {
+                     "crimson_wand.swap": "q.get_equipped_item_name == 'crimson_wand'"
+                  },
+                  {
+                     "crimson_staff.swap": "q.get_equipped_item_name == 'crimson_staff'"
+                  },
+                  {
+                     "crimson_orb.swap": "q.get_equipped_item_name == 'crimson_orb'"
+                  }
+               ]
+            },
+            "crimson_sword.swap": {
+               "animations": [
+                  "weapon_swap"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_sword'"
+                  }
+               ]
+            },
+            "crimson_battle_axe.swap": {
+               "animations": [
+                  "weapon_swap2"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_battle_axe'"
+                  }
+               ]
+            },
+            "crimson_scythe.swap": {
+               "animations": [
+                  "weapon_swap2"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_scythe'"
+                  }
+               ]
+            },
+            "crimson_dual_sword.swap": {
+               "animations": [
+                  "weapon_swap3"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_dual_sword'"
+                  }
+               ]
+            },
+            "crimson_dagger.swap": {
+               "animations": [
+                  "weapon_swap"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_dagger'"
+                  }
+               ]
+            },
+            "crimson_wand.swap": {
+               "animations": [
+                  "weapon_swap"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_wand'"
+                  }
+               ]
+            },
+            "crimson_staff.swap": {
+               "animations": [
+                  "weapon_swap2"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_staff'"
+                  }
+               ]
+            },
+            "crimson_orb.swap": {
+               "animations": [
+                  "weapon_swap2"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_orb'"
+                  }
+               ]
+            }
+         }
+      },
+      "controller.animation.player.weapon_hold": {
+         "states": {
+            "default": {
+               "animations": [
+                  {
+                     "crimson_sword_hold": "q.get_equipped_item_name == 'crimson_sword'"
+                  },
+                  {
+                     "crimson_battle_axe_hold": "q.get_equipped_item_name == 'crimson_battle_axe'"
+                  },
+                  {
+                     "crimson_scythe_hold": "q.get_equipped_item_name == 'crimson_scythe'"
+                  },
+                  {
+                     "crimson_dual_sword_hold": "q.get_equipped_item_name == 'crimson_dual_sword'"
+                  },
+                  {
+                     "crimson_dagger_hold": "q.get_equipped_item_name == 'crimson_dagger'"
+                  },
+                  {
+                     "crimson_wand_hold": "q.get_equipped_item_name == 'crimson_wand'"
+                  },
+                  {
+                     "crimson_staff_hold": "q.get_equipped_item_name == 'crimson_staff'"
+                  },
+                  {
+                     "crimson_orb_hold": "q.get_equipped_item_name == 'crimson_orb'"
+                  }
+               ],
+               "transitions": [
+                  {
+                     "run": "q.modified_move_speed > 0.5 && !v.attack_time"
+                  }
+               ],
+               "blend_transition": 0.1
+            },
+            "run": {
+               "transitions": [
+                  {
+                     "default": "q.modified_move_speed < 0.5 || v.attack_time"
+                  }
+               ],
+               "blend_transition": 0.1
+            }
+         }
+      },
+      "controller.animation.player.weapon_set": {
+         "states": {
+            "default": {
+               "transitions": [
+                  {
+                     "crimson_staff": "q.get_equipped_item_name == 'crimson_staff'"
+                  },
+                  {
+                     "crimson_orb": "q.get_equipped_item_name == 'crimson_orb'"
+                  }
+               ]
+            },
+            "crimson_staff": {
+               "animations": [
+                  "crimson_staff_set"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_staff'"
+                  }
+               ]
+            },
+            "crimson_orb": {
+               "animations": [
+                  "crimson_orb_set"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.get_equipped_item_name != 'crimson_orb'"
+                  }
+               ]
+            }
+         }
+      },
+      "controller.animation.player.weapon_attack": {
+         "initial_state": "default",
+         "states": {
+            "default": {
+               "transitions": [
+                  {
+                     "weapon": "q.mark_variant == 1"
+                  },
+                  {
+                     "weapon.range": "q.mark_variant == 2"
+                  }
+               ]
+            },
+            "weapon.range": {
+               "transitions": [
+                  {
+                     "default": "q.mark_variant != 2"
+                  },
+                  {
+                     "attack.range": "v.attack_time > 0"
+                  }
+               ]
+            },
+            "attack.range": {
+               "animations": [
+                  "weapon.range.attack"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.mark_variant != 2"
+                  },
+                  {
+                     "weapon.range": "q.all_animations_finished"
+                  }
+               ]
+            },
+            "weapon": {
+               "transitions": [
+                  {
+                     "default": "q.mark_variant != 1"
+                  },
+                  {
+                     "attack1": "v.attack_time > 0 && math.random_integer(1,3) == 1"
+                  },
+                  {
+                     "attack2": "v.attack_time > 0 && math.random_integer(1,3) == 2"
+                  },
+                  {
+                     "attack3": "v.attack_time > 0 && math.random_integer(1,3) == 3"
+                  }
+               ]
+            },
+            "attack1": {
+               "animations": [
+                  {
+                     "crimson_sword.attack1": "q.get_equipped_item_name == 'crimson_sword'"
+                  },
+                  {
+                     "crimson_battle_axe.attack1": "q.get_equipped_item_name == 'crimson_battle_axe'"
+                  },
+                  {
+                     "crimson_scythe.attack1": "q.get_equipped_item_name == 'crimson_scythe'"
+                  },
+                  {
+                     "crimson_dual_sword.attack1": "q.get_equipped_item_name == 'crimson_dual_sword'"
+                  }
+               ],
+               "transitions": [
+                  {
+                     "default": "q.any_animation_finished || q.mark_variant != 1"
+                  },
+                  {
+                     "weapon": "q.any_animation_finished"
+                  }
+               ],
+               "blend_transition": 0.1
+            },
+            "attack2": {
+               "animations": [
+                  {
+                     "crimson_sword.attack2": "q.get_equipped_item_name == 'crimson_sword'"
+                  },
+                  {
+                     "crimson_battle_axe.attack2": "q.get_equipped_item_name == 'crimson_battle_axe'"
+                  },
+                  {
+                     "crimson_scythe.attack2": "q.get_equipped_item_name == 'crimson_scythe'"
+                  },
+                  {
+                     "crimson_dual_sword.attack2": "q.get_equipped_item_name == 'crimson_dual_sword'"
+                  }
+               ],
+               "transitions": [
+                  {
+                     "default": "q.any_animation_finished || q.mark_variant != 1"
+                  },
+                  {
+                     "weapon": "q.any_animation_finished"
+                  }
+               ],
+               "blend_transition": 0.1
+            },
+            "attack3": {
+               "animations": [
+                  {
+                     "crimson_sword.attack3": "q.get_equipped_item_name == 'crimson_sword'"
+                  },
+                  {
+                     "crimson_battle_axe.attack3": "q.get_equipped_item_name == 'crimson_battle_axe'"
+                  },
+                  {
+                     "crimson_scythe.attack3": "q.get_equipped_item_name == 'crimson_scythe'"
+                  },
+                  {
+                     "crimson_dual_sword.attack3": "q.get_equipped_item_name == 'crimson_dual_sword'"
+                  }
+               ],
+               "transitions": [
+                  {
+                     "default": "q.any_animation_finished || q.mark_variant != 1"
+                  },
+                  {
+                     "weapon": "q.any_animation_finished"
+                  }
+               ],
+               "blend_transition": 0.1
+            }
+         }
+      },
+      "controller.animation.player.weapon_shoot": {
+         "states": {
+            "default": {
+               "transitions": [
+                  {
+                     "weapon": "q.mark_variant == 2"
+                  }
+               ]
+            },
+            "weapon": {
+               "transitions": [
+                  {
+                     "default": "q.mark_variant != 2"
+                  },
+                  {
+                     "shoot": "q.main_hand_item_use_duration > 1"
+                  }
+               ],
+               "blend_transition": 0.1
+            },
+            "shoot":{
+               "animations": [
+                  {
+                     "crimson_dagger.shoot": "q.get_equipped_item_name == 'crimson_dagger'"
+                  },
+                  {
+                     "crimson_wand.shoot": "q.get_equipped_item_name == 'crimson_wand'"
+                  },
+                  {
+                     "crimson_staff.shoot": "q.get_equipped_item_name == 'crimson_staff'"
+                  },
+                  {
+                     "crimson_orb.shoot": "q.get_equipped_item_name == 'crimson_orb'"
+                  }
+               ],
+               "transitions": [
+                  {
+                     "default": "q.mark_variant != 2"
+                  },
+                  {
+                     "weapon": "!q.main_hand_item_use_duration"
+                  },
+                  {
+                     "charge": "q.any_animation_finished"
+                  }
+               ],
+               "blend_transition": 1
+            },
+            "charge":{
+               "animations": [
+                  {
+                     "cd_8": "q.get_equipped_item_name == 'crimson_wand'"
+                  },
+                  {
+                     "cd_16": "q.get_equipped_item_name == 'crimson_dagger' || q.get_equipped_item_name == 'crimson_orb'"
+                  },
+                  {
+                     "cd_32": "q.get_equipped_item_name == 'crimson_staff'"
+                  }
+               ],
+               "transitions": [
+                  {
+                     "default": "q.mark_variant != 2"
+                  },
+                  {
+                     "weapon": "!q.main_hand_item_use_duration || q.any_animation_finished"
+                  }
+               ],
+               "blend_transition": 0.1
+            }
+         }
+      }
+   }
+}

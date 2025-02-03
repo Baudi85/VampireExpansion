@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mesh_item.set": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": ["(c.is_first_person ? 8 : 45-8)", "(c.is_first_person ? -120+180 : 0)", "(c.is_first_person ? -63 : -5)"],
+					"position": ["c.is_first_person ? -2.5 : 0.5", "c.is_first_person ? 0 : -1.5", "c.is_first_person ? 0 : -1.5"],
+					"scale": [1, 1.5, 1.5]
+				},
+				"leftitem": {
+					"rotation": ["(c.is_first_person ? -63 : 45-8)", "(c.is_first_person ? 180 : 0)", "(c.is_first_person ? 0 : -5)"],
+					"position": ["c.is_first_person ? -16.5 : 0.5", "c.is_first_person ? 4 : -1.5", "c.is_first_person ? 12 : -1.5"],
+					"scale": [1, 1.5, 1.5]
+				}
+			}
+		},
+		"animation.mesh_item.set_left": {
+			"loop": true,
+			"bones": {
+				"leftitem": {
+					"position": ["c.is_first_person ? -8 : 0", "0", "0"]
+				}
+			}
+		},
+		"animation.mesh_item.set_remove": {
+			"loop": true,
+			"bones": {
+				"weapon2": {
+					"scale": ["0", "0", "0"]
+				}
+			}
+		}
+	}
+}

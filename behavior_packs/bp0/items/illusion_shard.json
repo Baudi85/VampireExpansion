@@ -1,0 +1,22 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:item": {
+      "description": {
+         "identifier": "overtales:illusion_shard"
+      },
+      "components": {
+         "minecraft:max_stack_size": 1,
+         "minecraft:stacked_by_data": true,
+         "minecraft:foil": false,
+         "minecraft:hand_equipped": false,
+         "minecraft:food": {
+            "can_always_eat": true,
+            "nutrition": 0,
+            "saturation_modifier": "poor",
+            "cooldown_type": "illusion_shard",
+            "cooldown_time": 60
+         },
+         "minecraft:use_duration": 100000
+      }
+   }
+}

@@ -1,0 +1,45 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "overtales:soul_spider",
+      "materials": {
+        "default": "soul"
+      },
+      "textures": {
+        "default": "textures/entity/soul_spider"
+      },
+      "geometry": {
+        "default": "geometry.soul_spider.geo"
+      },
+      "spawn_egg": {
+        "base_color": "#eeffff",
+        "overlay_color": "#ffffff"
+      },
+      "animations": {
+        "lookat": "animation.entity.lookat",
+        "attack": "animation.soul_spider.attack",
+        "idle": "animation.soul_spider.idle",
+        "walk": "animation.soul_spider.walk",
+        "target": "animation.soul_spider.target",
+        "ac": "controller.animation.soul_monster.attack"
+      },
+      "scripts": {
+        "animate": [
+          "lookat",
+          "idle",
+          "ac",
+          {
+            "walk": "q.modified_move_speed"
+          },
+          {
+            "target": "q.has_target"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.overtales.soul"
+      ]
+    }
+  }
+}

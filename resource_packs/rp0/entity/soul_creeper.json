@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "overtales:soul_creeper",
+      "materials": {
+        "default": "soul",
+        "charged": "charged_soul_creeper"
+      },
+      "textures": {
+        "default": "textures/entity/soul_creeper",
+        "charged": "textures/entity/creeper/creeper_armor"
+      },
+      "geometry": {
+        "default": "geometry.soul_creeper.geo",
+        "charged": "geometry.soul_creeper.charged.geo"
+      },
+      "spawn_egg": {
+        "base_color": "#eeffff",
+        "overlay_color": "#ffffff"
+      },
+      "animations": {
+        "lookat": "animation.entity.lookat",
+        "idle": "animation.soul_creeper.idle",
+        "swelling": "animation.creeper.swelling"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.wobble = Math.sin(query.swell_amount * 5730) * query.swell_amount * 0.01 + 1.0;",
+          "variable.swelling_scale1 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.4 + 1.0) * variable.wobble;",
+          "variable.swelling_scale2 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.1 + 1.0) / variable.wobble;",
+          "variable.flash = Math.mod(Math.Round(query.swell_amount * 10.0), 2.0);"
+        ],
+        "animate": [
+          "lookat",
+          "idle",
+          "swelling"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.overtales.soul_creeper",
+        "controller.render.creeper_armor"
+      ]
+    }
+  }
+}

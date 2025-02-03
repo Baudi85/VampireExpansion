@@ -1,0 +1,25 @@
+{
+   "resource_pack_name": "pack.name",
+   "texture_name": "atlas.items",
+   "texture_data": {
+      "monster_soul": {"textures": ["textures/items/monster_soul"]},
+      "crimson_sword":{"textures":["textures/items/crimson_sword.item"]},
+      "crimson_battle_axe":{"textures":["textures/items/crimson_battle_axe.item"]},
+      "crimson_scythe":{"textures":["textures/items/crimson_scythe.item"]},
+      "crimson_dual_sword":{"textures":["textures/items/crimson_dual_sword.item"]},
+      "crimson_dagger":{"textures":["textures/items/crimson_dagger.item"]},
+      "crimson_wand":{"textures":["textures/items/crimson_wand.item"]},
+      "crimson_staff":{"textures":["textures/items/crimson_staff.item"]},
+      "crimson_orb":{"textures":["textures/items/crimson_orb.item"]},
+      "crimson_pearl":{"textures":["textures/items/crimson_pearl"]},
+      "totem_warrior":{"textures":["textures/items/totem_warrior"]},
+      "totem_archer":{"textures":["textures/items/totem_archer"]},
+      "totem_wolf":{"textures":["textures/items/totem_wolf"]},
+      "totem_bat":{"textures":["textures/items/totem_bat"]},
+      "illusion_shard":{"textures":["textures/items/illusion_shard"]},
+      "crimson_fruit":{"textures":["textures/items/crimson_fruit"]},
+      "skeleton_sculpture":{"textures":["textures/items/skeleton_sculpture"]},
+      "training_dummy":{"textures":["textures/items/training_dummy"]},
+      "item_stand":{"textures":["textures/items/item_stand"]}
+   }
+}

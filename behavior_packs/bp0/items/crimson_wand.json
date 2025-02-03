@@ -1,0 +1,22 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:item": {
+      "description": {
+         "identifier": "overtales:crimson_wand"
+      },
+      "components": {
+         "minecraft:max_stack_size": 1,
+         "minecraft:stacked_by_data": true,
+         "minecraft:foil": false,
+         "minecraft:hand_equipped": true,
+         "minecraft:food": {
+            "can_always_eat": true,
+            "nutrition": 0,
+            "saturation_modifier": "poor",
+            "cooldown_type": "crimson_wand",
+            "cooldown_time": 8
+         },
+         "minecraft:use_duration": 100000
+      }
+   }
+}

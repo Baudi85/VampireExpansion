@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.illusion_shard":{
+			"states": {
+				"default":{
+					"transitions": [
+						{
+							"explode": "query.swell_amount >= 1"
+						}
+					]
+				},
+				"explode":{
+					"on_entry": [
+						"/function artifact/illusion_shard_explode",
+						"@s despawn"
+					]
+				}
+			}
+		},
+		"controller.animation.command_crimson_pearl":{
+         "states": {
+            "default":{
+               "transitions": [
+                  {
+                     "warp": "query.skin_id == 1"
+                  }
+               ]
+            },
+            "warp":{
+               "on_entry": [
+                  "@s despawn",
+                  "/function artifact/crimson_pearl_warp"
+               ]
+            }
+         }
+      }
+	}
+}

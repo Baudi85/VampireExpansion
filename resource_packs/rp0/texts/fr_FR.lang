@@ -1,0 +1,8 @@
+pack.name=Vampire Expansion
+pack.description=Resource pack for Vampire Expansion
+
+entity.unknown.name=Tamed
+item.chainmail_helmet.name=Crimson Helmet
+item.chainmail_chestplate.name=Crimson Chestplate
+item.chainmail_leggings.name=Crimson Leggings
+item.chainmail_boots.name=Crimson Boots

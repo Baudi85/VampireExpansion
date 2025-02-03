@@ -1,0 +1,14 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:item": {
+      "description": {
+         "identifier": "overtales:illusion_shard",
+         "category": "Equipment"
+      },
+      "components": {
+         "minecraft:icon": "illusion_shard",
+         "minecraft:use_animation": "bow",
+         "minecraft:render_offsets": "apple"
+      }
+   }
+}

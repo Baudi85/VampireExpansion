@@ -1,0 +1,49 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:totem_archer",
+			"geometry": {
+				"default": "geometry.totem_archer.geo",
+				"mesh_item_fake": "geometry.mesh_item_fake.geo"
+			},
+			"textures": {
+				"default": "textures/entity/totem_archer",
+				"mesh_item_fake": "textures/items/totem_archer_bow"
+			},
+			"materials": {
+				"default": "entity_emissive_alpha",
+				"mesh_item_fake": "entity_alphatest"
+			},
+			"render_controllers": [
+				"controller.render.overtales",
+				"controller.render.overtales.mesh_item_fake"
+			],
+			"animations": {
+				"lookat": "animation.entity.lookat",
+				"death": "animation.entity.death",
+				"idle": "animation.totem_archer.idle",
+				"walk": "animation.totem_archer.walk",
+				"attack": "animation.totem_archer.attack",
+				"spawn": "animation.totem_archer.spawn",
+				"despawn": "animation.totem_archer.despawn",
+				"ac_attack": "controller.animation.totem_summon.attack_range",
+				"ac": "controller.animation.totem_summon"
+			},
+			"scripts": {
+				"animate": [
+					"lookat",
+					"idle",
+					{
+						"walk": "query.modified_move_speed"
+					},
+					{
+						"death": "!q.is_alive"
+					},
+					"ac_attack",
+					"ac"
+				]
+			}
+		}
+	}
+}

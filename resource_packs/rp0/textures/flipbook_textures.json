@@ -1,0 +1,16 @@
+[
+  {
+    "flipbook_texture": "textures/blocks/mushroom_scary_ani",
+    "atlas_tile": "mushroom_scary",
+    "ticks_per_frame": 200,
+    "frames": [ 0,0,0,0,1,0,0,0,0,2,1 ],
+    "blend_frames": true
+  },
+  {
+    "flipbook_texture": "textures/blocks/red_wool_scary_ani",
+    "atlas_tile": "red_wool_scary",
+    "ticks_per_frame": 200,
+    "frames": [ 0,0,0,0,1,0,0,0,0,2,1 ],
+    "blend_frames": true
+  }
+]

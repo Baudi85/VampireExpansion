@@ -1,0 +1,43 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "overtales:totem_wolf",
+			"geometry": {
+				"default": "geometry.totem_wolf.geo"
+			},
+			"textures": {
+				"default": "textures/entity/totem_wolf"
+			},
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"render_controllers": [
+				"controller.render.overtales"
+			],
+			"animations": {
+				"lookat": "animation.entity.lookat",
+				"death": "animation.entity.death",
+				"walk": "animation.totem_wolf.walk",
+				"attack": "animation.totem_wolf.attack",
+				"spawn": "animation.totem_wolf.spawn",
+				"despawn": "animation.totem_wolf.despawn",
+				"ac_attack": "controller.animation.totem_summon.attack",
+				"ac": "controller.animation.totem_summon"
+			},
+			"scripts": {
+				"animate": [
+					"lookat",
+					{
+						"walk": "query.modified_move_speed"
+					},
+					{
+						"death": "!q.is_alive"
+					},
+					"ac_attack",
+					"ac"
+				]
+			}
+		}
+	}
+}

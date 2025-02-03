@@ -1,0 +1,26 @@
+{
+   "format_version": "1.19.50",
+   "minecraft:block": {
+      "description": {
+         "identifier": "overtales:statue_top_west",
+         "menu_category": {
+            "category": "nature"
+         }
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "statue",
+               "render_method": "alpha_test",
+               "ambient_occlusion": false
+            }
+         },
+         "minecraft:geometry": "geometry.statue_top_west.geo",
+         "minecraft:destructible_by_mining":{
+            "seconds_to_destroy": 1
+         },
+         "minecraft:light_dampening": 0
+      },
+      "events": {}
+   }
+}

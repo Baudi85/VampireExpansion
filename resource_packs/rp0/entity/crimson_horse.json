@@ -1,0 +1,52 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "overtales:crimson_horse",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/crimson_horse_wild",
+        "variant1": "textures/entity/crimson_horse_tame"
+      },
+      "geometry": {
+        "default": "geometry.crimson_horse.geo"
+      },
+      "spawn_egg": {
+        "base_color": "#450f0f",
+				"overlay_color": "#ff4949"
+      },
+      "animations": {
+        "walk": "animation.crimson_horse.walk",
+        "lookat": "animation.crimson_horse.lookat",
+        "jump": "animation.crimson_horse.jump",
+        "particle": "animation.crimson_horse.particle",
+        "ac": "controller.animation.crimson_horse"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.head_x_rot = query.target_x_rotation + (query.modified_move_speed > 0 ? (math.cos(query.modified_distance_moved * 38.38/2) * 10 * query.modified_move_speed + query.modified_move_speed * 10) : 0.0);",
+          "variable.leg_stand_factor = math.cos((query.modified_distance_moved * 38.38) + 180.0);",
+          "variable.leg_x_rot_anim = variable.leg_stand_factor * 45.8 * query.modified_move_speed;"
+        ],
+        "animate": [
+          "lookat",
+          "ac",
+          {
+            "walk": "q.modified_move_speed"
+          },
+          {
+            "particle": "q.modified_move_speed"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.crimson_horse"
+      ],
+      "particle_effects": {
+        "particle": "overtales:crimson_horse"
+      }
+    }
+  }
+}

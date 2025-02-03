@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.training_dummy.hurt": {
+			"loop": true,
+			"animation_length": 0.35,
+			"anim_time_update": "0.33 * query.delta_time + query.anim_time",
+			"bones": {
+				"root": {
+					"rotation": ["-math.sin(q.anim_time*1024)*22.5", 0, 0]
+				},
+				"body": {
+					"rotation": ["-math.sin(q.anim_time*1024)*22.5", 0, "math.cos(q.anim_time*1024)"]
+				},
+				"head": {
+					"rotation": ["-math.sin(q.anim_time*1024)*22.5", 0, "math.cos(q.anim_time*1024)*22.5"]
+				},
+				"right_arm": {
+					"rotation": ["math.cos(q.anim_time*1024)*22.5", "-math.cos(q.anim_time*1024)*22.5", 0]
+				},
+				"left_arm": {
+					"rotation": ["-math.cos(q.anim_time*1024)*22.5", "math.cos(q.anim_time*1024)*22.5", 0]
+				}
+			}
+		}
+	}
+}

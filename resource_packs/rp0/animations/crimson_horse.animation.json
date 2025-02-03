@@ -1,0 +1,77 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.crimson_horse.walk": {
+			"loop": true,
+			"bones": {
+				"fl_leg": {
+					"rotation": ["math.cos(query.modified_distance_moved * 38.38)*60", 0, 0]
+				},
+				"fr_leg": {
+					"rotation": ["-math.cos(query.modified_distance_moved * 38.38)*60", 0, 0]
+				},
+				"bl_leg": {
+					"rotation": ["math.cos(query.modified_distance_moved * 38.38)*60", 0, 0]
+				},
+				"br_leg": {
+					"rotation": ["-math.cos(query.modified_distance_moved * 38.38)*60", 0, 0]
+				},
+				"tail": {
+					"rotation": ["math.clamp(q.modified_distance_moved*38.38/4,0,45)", 0, 0]
+				}
+			}
+		},
+		"animation.crimson_horse.lookat": {
+			"loop": true,
+			"bones": {
+				"Neck": {
+					"rotation": ["variable.head_x_rot", "q.has_rider ? q.target_y_rotation/2 : q.target_y_rotation", 0]
+				},
+				"root": {
+					"rotation": [0, "q.has_rider ? q.target_y_rotation : 0", 0]
+				}
+			}
+		},
+		"animation.crimson_horse.jump": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [-15, 0, 0]
+				},
+				"tail": {
+					"rotation": [55, 0, 0]
+				},
+				"fl_leg": {
+					"rotation": ["-60 -math.cos(q.life_time*687)*60", 0, 0]
+				},
+				"fr_leg": {
+					"rotation": ["-60 +math.cos(q.life_time*687)*60", 0, 0]
+				}
+			}
+		},
+		"animation.crimson_horse.particle": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "particle",
+						"locator": "particle1"
+					},
+					{
+						"effect": "particle",
+						"locator": "particle2"
+					},
+					{
+						"effect": "particle",
+						"locator": "particle3"
+					},
+					{
+						"effect": "particle",
+						"locator": "particle4"
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+   "resource_pack_name": "pack.name",
+   "texture_name": "atlas.terrain",
+   "padding": 8,
+   "num_mip_levels": 4,
+   "texture_data": {
+      "hanglamp": {"textures": "textures/entity/block/hanglamp"},
+      "plant_pot": {"textures": "textures/entity/block/plant_pot"},
+      "statue": {"textures": "textures/entity/block/statue"},
+      "tall_lamp": {"textures": "textures/entity/block/tall_lamp"},
+      "wall_lamp": {"textures": "textures/entity/block/wall_lamp"},
+      "round_lamp": {"textures": "textures/entity/block/round_lamp"},
+      "small_rose_bush": {"textures": "textures/entity/block/small_rose_bush"},
+      "mushroom_scary": {"textures": "textures/blocks/mushroom_scary"},
+      "red_wool_scary": {"textures": "textures/blocks/red_wool_scary"}
+   }
+}

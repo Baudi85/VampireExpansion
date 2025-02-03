@@ -1,0 +1,28 @@
+{
+   "format_version": "1.10.0",
+   "animation_controllers": {
+      "controller.animation.crimson_armor.helmet": {
+         "states": {
+            "default": {
+               "transitions": [
+                  {
+                     "fly": "!q.is_on_ground"
+                  }
+               ],
+               "blend_transition": 0.1
+            },
+            "fly":{
+               "animations": [
+                  "fly"
+               ],
+               "transitions": [
+                  {
+                     "default": "q.is_on_ground"
+                  }
+               ],
+               "blend_transition": 0.1
+            }
+         }
+      }
+   }
+}

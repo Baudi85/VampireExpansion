@@ -1,0 +1,2 @@
+function dungeon/dungeon_easy
+function dungeon/dungeon_hard

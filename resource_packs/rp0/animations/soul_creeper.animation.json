@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.soul_creeper.idle": {
+			"loop": true,
+			"bones": {
+				"leg0": {
+					"rotation": ["-math.cos(q.anim_time*38.7*1.5)*15+15", 0, 0]
+				},
+				"leg1": {
+					"rotation": ["math.cos(q.anim_time*38.7*1.5)*15+15", 0, 0]
+				},
+				"leg2": {
+					"rotation": ["math.cos(q.anim_time*38.7*1.5)*15+15", 0, 0]
+				},
+				"leg3": {
+					"rotation": ["-math.cos(q.anim_time*38.7*1.5)*15+15", 0, 0]
+				},
+				"root": {
+					"position": [0, "-math.cos(q.anim_time*38.7*2)*3+3", 0]
+				},
+				"body": {
+					"rotation": ["math.cos(q.anim_time*38.7)*2.5", "math.sin(q.anim_time*38.7)*2.5", 0]
+				}
+			}
+		}
+	}
+}

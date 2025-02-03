@@ -1,0 +1,836 @@
+{
+  "format_version": "1.18.20",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false,
+      "animations": {
+        "totem_item": "controller.animation.player.totem_item",
+        "wing": "controller.animation.player.wing",
+        "crimson_armor": "controller.animation.player.crimson_armor",
+        "crimson_armor_cd": "animation.player.crimson_armor_cd",
+        "weapon": "controller.animation.player.weapon",
+        "weapon_cd": "animation.player.weapon_cd",
+        "weapon_attack": "controller.animation.player.weapon_attack",
+        "cd_8": "animation.player.weapon.cd.8",
+        "cd_16": "animation.player.weapon.cd.16",
+        "cd_32": "animation.player.weapon.cd.32"
+      },
+      "scripts": {
+        "animate": [
+          "totem_item",
+          "wing",
+          "crimson_armor",
+          "weapon",
+          "weapon_attack"
+        ]
+      }
+    },
+    "component_groups": {
+      "minecraft:add_bad_omen": {
+        "minecraft:spell_effects": {
+          "add_effects": [
+            {
+              "effect": "bad_omen",
+              "duration": 6000,
+              "visible": false,
+              "display_on_screen_animation": true
+            }
+          ]
+        },
+        "minecraft:timer": {
+          "time": [
+            0.0,
+            0.0
+          ],
+          "looping": false,
+          "time_down_event": {
+            "event": "minecraft:clear_add_bad_omen",
+            "target": "self"
+          }
+        }
+      },
+      "minecraft:clear_bad_omen_spell_effect": {
+        "minecraft:spell_effects": {}
+      },
+      "minecraft:raid_trigger": {
+        "minecraft:raid_trigger": {
+          "triggered_event": {
+            "event": "minecraft:remove_raid_trigger",
+            "target": "self"
+          }
+        },
+        "minecraft:spell_effects": {
+          "remove_effects": "bad_omen"
+        }
+      },
+      "mark_variant_0":{
+        "minecraft:mark_variant": {
+          "value": 0
+        }
+      },
+      "mark_variant_1":{
+        "minecraft:mark_variant": {
+          "value": 1
+        }
+      },
+      "mark_variant_2":{
+        "minecraft:mark_variant": {
+          "value": 2
+        }
+      },
+      "totem_warrior": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:totem_pretame",
+              "spawn_event": "totem_warrior1"
+            },
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:totem_pretame",
+              "spawn_event": "totem_warrior2"
+            },
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:totem_pretame",
+              "spawn_event": "totem_warrior3"
+            }
+          ]
+        }
+      },
+      "totem_archer": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:totem_pretame",
+              "spawn_event": "totem_archer1"
+            },
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:totem_pretame",
+              "spawn_event": "totem_archer2"
+            },
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:totem_pretame",
+              "spawn_event": "totem_archer3"
+            }
+          ]
+        }
+      },
+      "totem_wolf": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:totem_pretame",
+              "spawn_event": "totem_wolf1"
+            },
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:totem_pretame",
+              "spawn_event": "totem_wolf2"
+            }
+          ]
+        }
+      },
+      "totem_bat": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:totem_pretame",
+              "spawn_event": "totem_bat"
+            }
+          ]
+        }
+      },
+      "crimson_pearl": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:crimson_pearl"
+            }
+          ]
+        }
+      },
+      "default_attack": {
+        "minecraft:attack": {
+          "damage": 1
+        }
+      },
+      "crimson_sword": {
+        "minecraft:attack": {
+          "damage": 8
+        }
+      },
+      "crimson_battle_axe": {
+        "minecraft:attack": {
+          "damage": 20
+        }
+      },
+      "crimson_scythe": {
+        "minecraft:attack": {
+          "damage": 10
+        }
+      },
+      "crimson_dual_sword": {
+        "minecraft:attack": {
+          "damage": 6
+        }
+      },
+      "crimson_dagger": {
+        "minecraft:attack": {
+          "damage": 3
+        }
+      },
+      "crimson_wand": {
+        "minecraft:attack": {
+          "damage": 3
+        }
+      },
+      "crimson_staff": {
+        "minecraft:attack": {
+          "damage": 3
+        }
+      },
+      "crimson_orb": {
+        "minecraft:attack": {
+          "damage": 3
+        }
+      },
+      "crimson_dagger_projectile":{
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:crimson_dagger_projectile"
+            }
+          ]
+        }
+      },
+      "crimson_wand_projectile":{
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:crimson_wand_projectile"
+            }
+          ]
+        }
+      },
+      "crimson_staff_projectile":{
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:crimson_staff_projectile"
+            }
+          ]
+        }
+      },
+      "crimson_orb_projectile":{
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:crimson_orb_projectile",
+              "spawn_event": "pos0"
+            },
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:crimson_orb_projectile",
+              "spawn_event": "pos1"
+            },
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:crimson_orb_projectile",
+              "spawn_event": "pos2"
+            },
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:crimson_orb_projectile",
+              "spawn_event": "pos3"
+            },
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "single_use": true,
+              "spawn_entity": "overtales:crimson_orb_projectile",
+              "spawn_event": "pos4"
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "Math.Min(query.player_level * 7, 100)"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "player"
+        ]
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:loot": {
+        "table": "loot_tables/empty.json"
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      },
+      "minecraft:can_climb": {},
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 1
+      },
+      "minecraft:exhaustion_values": {
+        "heal": 6,
+        "jump": 0.05,
+        "sprint_jump": 0.2,
+        "mine": 0.005,
+        "attack": 0.1,
+        "damage": 0.1,
+        "walk": 0.0,
+        "sprint": 0.1,
+        "swim": 0.01
+      },
+      "minecraft:player.saturation": {
+        "value": 5,
+        "max": 20
+      },
+      "minecraft:player.exhaustion": {
+        "value": 0,
+        "max": 20
+      },
+      "minecraft:player.level": {
+        "value": 0,
+        "max": 24791
+      },
+      "minecraft:player.experience": {
+        "value": 0,
+        "max": 1
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": -1,
+        "inhale_time": 3.75,
+        "generates_bubbles": false
+      },
+      "minecraft:nameable": {
+        "always_show": true,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:insomnia": {
+        "days_until_insomnia": 3
+      },
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "family_types": [
+          "parrot_tame"
+        ],
+        "pull_in_entities": true,
+        "seats": [
+          {
+            "position": [
+              0.4,
+              -0.2,
+              -0.1
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 0,
+            "lock_rider_rotation": 0
+          },
+          {
+            "position": [
+              -0.4,
+              -0.2,
+              -0.1
+            ],
+            "min_rider_count": 1,
+            "max_rider_count": 2,
+            "lock_rider_rotation": 0
+          }
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:block_climber": {},
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_mob_effect",
+                  "subject": "self",
+                  "value": "bad_omen"
+                },
+                {
+                  "test": "is_in_village",
+                  "subject": "self",
+                  "value": true
+                }
+              ]
+            },
+            "event": "minecraft:trigger_raid"
+          },
+          {
+            "filters": {
+              "none_of": [
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_sword"
+                },
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_battle_axe"
+                },
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_scythe"
+                },
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_dagger"
+                },
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_wand"
+                },
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_staff"
+                },
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_dual_sword"
+                },
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_orb"
+                }
+              ]
+            },
+            "event": "default_attack"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_sword"
+                }
+              ]
+            },
+            "event": "crimson_sword"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_battle_axe"
+                }
+              ]
+            },
+            "event": "crimson_battle_axe"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_scythe"
+                }
+              ]
+            },
+            "event": "crimson_scythe"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_dagger"
+                }
+              ]
+            },
+            "event": "crimson_dagger"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_wand"
+                }
+              ]
+            },
+            "event": "crimson_wand"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_staff"
+                }
+              ]
+            },
+            "event": "crimson_staff"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_dual_sword"
+                }
+              ]
+            },
+            "event": "crimson_dual_sword"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "operator": "==",
+                  "domain": "hand",
+                  "subject": "self",
+                  "value": "overtales:crimson_orb"
+                }
+              ]
+            },
+            "event": "crimson_orb"
+          }
+        ]
+      }
+    },
+    "events": {
+      "minecraft:gain_bad_omen": {
+        "add": {
+          "component_groups": [
+            "minecraft:add_bad_omen"
+          ]
+        }
+      },
+      "minecraft:clear_add_bad_omen": {
+        "remove": {
+          "component_groups": [
+            "minecraft:add_bad_omen"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:clear_bad_omen_spell_effect"
+          ]
+        }
+      },
+      "minecraft:trigger_raid": {
+        "add": {
+          "component_groups": [
+            "minecraft:raid_trigger"
+          ]
+        }
+      },
+      "minecraft:remove_raid_trigger": {
+        "remove": {
+          "component_groups": [
+            "minecraft:raid_trigger"
+          ]
+        }
+      },
+      "mark_variant_0":{
+        "add": {
+          "component_groups": [
+            "mark_variant_0"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mark_variant_1",
+            "mark_variant_2"
+          ]
+        }
+      },
+      "mark_variant_1":{
+        "add": {
+          "component_groups": [
+            "mark_variant_1"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mark_variant_0",
+            "mark_variant_2"
+          ]
+        }
+      },
+      "mark_variant_2":{
+        "add": {
+          "component_groups": [
+            "mark_variant_2"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mark_variant_0",
+            "mark_variant_1"
+          ]
+        }
+      },
+      "totem_warrior": {
+        "add": {
+          "component_groups": [
+            "totem_warrior"
+          ]
+        }
+      },
+      "totem_archer": {
+        "add": {
+          "component_groups": [
+            "totem_archer"
+          ]
+        }
+      },
+      "totem_wolf": {
+        "add": {
+          "component_groups": [
+            "totem_wolf"
+          ]
+        }
+      },
+      "totem_bat": {
+        "add": {
+          "component_groups": [
+            "totem_bat"
+          ]
+        }
+      },
+      "crimson_pearl": {
+        "add": {
+          "component_groups": [
+            "crimson_pearl"
+          ]
+        }
+      },
+      "default_attack": {
+        "add": {
+          "component_groups": [
+            "default_attack"
+          ]
+        }
+      },
+      "crimson_sword": {
+        "add": {
+          "component_groups": [
+            "crimson_sword"
+          ]
+        }
+      },
+      "crimson_battle_axe": {
+        "add": {
+          "component_groups": [
+            "crimson_battle_axe"
+          ]
+        }
+      },
+      "crimson_scythe": {
+        "add": {
+          "component_groups": [
+            "crimson_scythe"
+          ]
+        }
+      },
+      "crimson_dagger": {
+        "add": {
+          "component_groups": [
+            "crimson_dagger"
+          ]
+        }
+      },
+      "crimson_wand": {
+        "add": {
+          "component_groups": [
+            "crimson_wand"
+          ]
+        }
+      },
+      "crimson_staff": {
+        "add": {
+          "component_groups": [
+            "crimson_staff"
+          ]
+        }
+      },
+      "crimson_dual_sword": {
+        "add": {
+          "component_groups": [
+            "crimson_dual_sword"
+          ]
+        }
+      },
+      "crimson_orb": {
+        "add": {
+          "component_groups": [
+            "crimson_orb"
+          ]
+        }
+      },
+      "crimson_dagger_projectile": {
+        "add": {
+          "component_groups": [
+            "crimson_dagger_projectile"
+          ]
+        }
+      },
+      "crimson_wand_projectile": {
+        "add": {
+          "component_groups": [
+            "crimson_wand_projectile"
+          ]
+        }
+      },
+      "crimson_staff_projectile": {
+        "add": {
+          "component_groups": [
+            "crimson_staff_projectile"
+          ]
+        }
+      },
+      "crimson_orb_projectile": {
+        "add": {
+          "component_groups": [
+            "crimson_orb_projectile"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,271 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "overtales:crimson_orb_projectile",
+         "is_spawnable": false,
+         "is_summonable": true,
+         "is_experimental": false,
+         "runtime_identifier": "minecraft:snowball",
+         "animations": {
+            "command": "controller.animation.projectile"
+         },
+         "scripts": {
+            "animate": [
+               "command"
+            ]
+         }
+      },
+      "component_groups": {
+         "hit":{
+            "minecraft:skin_id": {
+               "value": 1
+            }
+         },
+         "despawn":{
+            "minecraft:instant_despawn": {}
+         },
+         "pos0":{
+            "minecraft:projectile": {
+               "on_hit": {
+                  "definition_event": {
+                     "event_trigger": {
+                        "event": "hit",
+                        "target": "self"
+                     }
+                  },
+                  "stick_in_ground": {},
+                  "impact_damage": {
+                     "damage": 2,
+                     "knockback": true,
+                     "semi_random_diff_damage": true,
+                     "destroy_on_hit": false,
+                     "max_critical_damage": 8,
+                     "min_critical_damage": 4,
+                     "power_multiplier": 1
+                  }
+               },
+               "power": 2,
+               "gravity": 0,
+               "uncertainty_base": 10,
+               "uncertainty_multiplier": 2,
+               "anchor": 1,
+               "offset": [
+                  0,
+                  0,
+                  0
+               ],
+               "multiple_targets": false
+            }
+         },
+         "pos1":{
+            "minecraft:projectile": {
+               "on_hit": {
+                  "definition_event": {
+                     "event_trigger": {
+                        "event": "hit",
+                        "target": "self"
+                     }
+                  },
+                  "stick_in_ground": {},
+                  "impact_damage": {
+                     "damage": 2,
+                     "knockback": true,
+                     "semi_random_diff_damage": true,
+                     "destroy_on_hit": false,
+                     "max_critical_damage": 8,
+                     "min_critical_damage": 4,
+                     "power_multiplier": 1
+                  }
+               },
+               "power": 2,
+               "gravity": 0,
+               "uncertainty_base": 10,
+               "uncertainty_multiplier": 2,
+               "anchor": 1,
+               "offset": [
+                  0.25,
+                  0.25,
+                  0
+               ],
+               "multiple_targets": false
+            }
+         },
+         "pos2":{
+            "minecraft:projectile": {
+               "on_hit": {
+                  "definition_event": {
+                     "event_trigger": {
+                        "event": "hit",
+                        "target": "self"
+                     }
+                  },
+                  "stick_in_ground": {},
+                  "impact_damage": {
+                     "damage": 2,
+                     "knockback": true,
+                     "semi_random_diff_damage": true,
+                     "destroy_on_hit": false,
+                     "max_critical_damage": 8,
+                     "min_critical_damage": 4,
+                     "power_multiplier": 1
+                  }
+               },
+               "power": 2,
+               "gravity": 0,
+               "uncertainty_base": 10,
+               "uncertainty_multiplier": 2,
+               "anchor": 1,
+               "offset": [
+                  -0.25,
+                  0.25,
+                  0
+               ],
+               "multiple_targets": false
+            }
+         },
+         "pos3":{
+            "minecraft:projectile": {
+               "on_hit": {
+                  "definition_event": {
+                     "event_trigger": {
+                        "event": "hit",
+                        "target": "self"
+                     }
+                  },
+                  "stick_in_ground": {},
+                  "impact_damage": {
+                     "damage": 2,
+                     "knockback": true,
+                     "semi_random_diff_damage": true,
+                     "destroy_on_hit": false,
+                     "max_critical_damage": 8,
+                     "min_critical_damage": 4,
+                     "power_multiplier": 1
+                  }
+               },
+               "power": 2,
+               "gravity": 0,
+               "uncertainty_base": 10,
+               "uncertainty_multiplier": 2,
+               "anchor": 1,
+               "offset": [
+                  0.25,
+                  -0.25,
+                  0
+               ],
+               "multiple_targets": false
+            }
+         },
+         "pos4":{
+            "minecraft:projectile": {
+               "on_hit": {
+                  "definition_event": {
+                     "event_trigger": {
+                        "event": "hit",
+                        "target": "self"
+                     }
+                  },
+                  "stick_in_ground": {},
+                  "impact_damage": {
+                     "damage": 2,
+                     "knockback": true,
+                     "semi_random_diff_damage": true,
+                     "destroy_on_hit": false,
+                     "max_critical_damage": 8,
+                     "min_critical_damage": 4,
+                     "power_multiplier": 1
+                  }
+               },
+               "power": 2,
+               "gravity": 0,
+               "uncertainty_base": 10,
+               "uncertainty_multiplier": 2,
+               "anchor": 1,
+               "offset": [
+                  -0.25,
+                  -0.25,
+                  0
+               ],
+               "multiple_targets": false
+            }
+         }
+      },
+      "components": {
+         "minecraft:type_family": {
+            "family": [
+               "crimson_orb_projectile",
+               "projectile"
+            ]
+         },
+         "minecraft:collision_box": {
+            "width": 0.25,
+            "height": 0.25
+         },
+         "minecraft:timer": {
+            "time": 1,
+            "time_down_event": {
+               "event": "despawn",
+               "target": "self"
+            }
+         },
+         "minecraft:physics": {},
+         "minecraft:pushable": {
+            "is_pushable": false,
+            "is_pushable_by_piston": true
+         },
+         "minecraft:conditional_bandwidth_optimization": {}
+      },
+      "events": {
+         "hit":{
+            "add": {
+               "component_groups": [
+                  "hit"
+               ]
+            }
+         },
+         "despawn":{
+            "add": {
+               "component_groups": [
+                  "despawn"
+               ]
+            }
+         },
+         "pos0":{
+            "add": {
+               "component_groups": [
+                  "pos0"
+               ]
+            }
+         },
+         "pos1":{
+            "add": {
+               "component_groups": [
+                  "pos1"
+               ]
+            }
+         },
+         "pos2":{
+            "add": {
+               "component_groups": [
+                  "pos2"
+               ]
+            }
+         },
+         "pos3":{
+            "add": {
+               "component_groups": [
+                  "pos3"
+               ]
+            }
+         },
+         "pos4":{
+            "add": {
+               "component_groups": [
+                  "pos4"
+               ]
+            }
+         }
+      }
+   }
+}

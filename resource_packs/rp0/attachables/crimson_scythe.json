@@ -1,0 +1,44 @@
+{
+   "format_version": "1.10.0",
+   "minecraft:attachable": {
+      "description": {
+         "identifier": "overtales:crimson_scythe",
+         "geometry": {
+            "default": "geometry.mesh_item.geo"
+         },
+         "textures": {
+            "default": "textures/items/crimson_scythe"
+         },
+         "materials": {
+            "default": "entity_alphatest"
+         },
+         "render_controllers": [
+            "controller.render.overtales"
+         ],
+         "animations": {
+            "set": "animation.mesh_item.set",
+            "run": "animation.player.weapon.run",
+            "swing": "animation.player.weapon.swing",
+            "attack1": "animation.player.crimson_scythe.1.attack1",
+            "attack2": "animation.player.crimson_scythe.1.attack2",
+            "attack3": "animation.player.crimson_scythe.1.attack3",
+            "ac": "controller.animation.weapon_attack",
+            "ac_run": "controller.animation.player.weapon_run"
+         },
+         "scripts": {
+            "animate": [
+               "set",
+               {
+                  "ac": "c.is_first_person"
+               },
+               {
+                  "ac_run": "c.is_first_person"
+               }
+            ],
+				"pre_animation": [
+					"variable.attack_time = c.owning_entity -> v.attack_time;"
+				]
+         }
+      }
+   }
+}
